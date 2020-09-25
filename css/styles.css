@@ -1,0 +1,1235 @@
+/*********************
+BREAKPOINTS
+*********************/
+@font-face {
+  font-family: "FS Albert Arabic Regular";
+  src: url("../fonts/FSAlbertArabic-Regular.otf");
+}
+
+@font-face {
+  font-family: "Myriad Pro Regular";
+  src: url("../fonts/MYRIADPRO-REGULAR.OTF");
+}
+
+*, *::before, *::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.visit-image-container {
+  background-position: center center;
+}
+
+.chevron-animation {
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+}
+
+/* Extra small devices (phones, 600px and down) */
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 300px) and (max-width: 1199px) {
+  body {
+    overflow-x: hidden;
+  }
+  header.desktop {
+    display: none;
+  }
+  footer.desktop {
+    display: none;
+  }
+  header.mobile {
+    background-color: #000;
+  }
+  header.mobile div.header-top-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 20px;
+  }
+  header.mobile div.header-top-container div.logo-container img {
+    width: 135px;
+  }
+  header.mobile div.header-top-container div.toggle-lang-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    width: 35%;
+  }
+  header.mobile div.header-top-container div.toggle-lang-container a.language-switcher {
+    text-decoration: none;
+    color: white;
+    font-family: "FS Albert Arabic Regular";
+    font-size: 14pt;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  header.mobile div.header-top-container div.toggle-lang-container a.mobile-menu-toggle {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 10px;
+  }
+  header.mobile div.header-bottom-container div.search-container {
+    margin-top: 15px;
+    padding: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  header.mobile div.header-bottom-container div.search-container input {
+    background-color: #333333;
+    color: #cbb67f;
+    font-size: 10pt;
+    font-family: "Myriad Pro Regular";
+    padding: 5px 15px;
+    border: none;
+    border-radius: 15px;
+    border: 1px solid #cbb67f;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+  header.mobile div.header-bottom-container div.nav-container {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 190px;
+    z-index: 3;
+    background-color: #333;
+    color: #fff;
+  }
+  header.mobile div.header-bottom-container div.nav-container ul.nav-items {
+    list-style: none;
+  }
+  header.mobile div.header-bottom-container div.nav-container ul.nav-items li.nav-item a {
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    font-family: "Myriad Pro Regular";
+    font-size: 22pt;
+    text-transform: uppercase;
+    padding: 20px 0px;
+  }
+  header.mobile div.header-bottom-container div.nav-container ul.nav-items li.nav-item div.dropdown-link-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  header.mobile div.header-bottom-container div.nav-container ul.nav-items li.nav-item div.dropdown-link-container span.mobile-menu-dropdown {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 10px;
+    padding: 5px;
+    font-size: 22px;
+    cursor: pointer;
+    color: #cbb67f;
+  }
+  header.mobile div.header-bottom-container div.nav-container ul.nav-items div.dropdown-content {
+    display: none;
+    margin-left: 10px;
+  }
+  section.banner .swiper-slide {
+    height: 50vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  section.banner .swiper-slide .slide-title {
+    font-size: 58pt;
+    font-family: "FS Albert Arabic Regular";
+    line-height: 1;
+    text-align: center;
+    color: white;
+    font-size: 32pt;
+  }
+  .slick-dots li button {
+    font-size: 38px;
+    line-height: 0;
+    display: block;
+    width: 20px;
+    height: 20px;
+    padding: 5px;
+    cursor: pointer;
+    color: #cbb67f00;
+    border: 0;
+    outline: none;
+  }
+  .slick-dots li button::before {
+    font-size: 54px !important;
+    top: -35px !important;
+    color: #cbb67f !important;
+  }
+  section.about {
+    width: 80%;
+    margin: 0 auto 45px auto;
+  }
+  section.about h2 {
+    font-size: 24pt;
+    font-family: "FS Albert Arabic Regular";
+    line-height: 1;
+    text-align: center;
+    color: #53585a;
+    font-weight: 100;
+  }
+  section.about p {
+    font-family: "FS Albert Arabic Regular";
+    font-size: 14pt;
+    line-height: 1.5;
+    color: #53585a;
+    text-align: justify;
+  }
+  section.contact h2 {
+    font-size: 24pt;
+    font-weight: 100;
+    font-family: "FS Albert Arabic Regular";
+    color: #53585a;
+    text-align: center;
+    line-height: 1;
+  }
+  section.contact div.map-row {
+    display: block;
+    width: 100%;
+  }
+  section.contact div.map-row div.map {
+    -webkit-box-flex: 2;
+        -ms-flex: 2;
+            flex: 2;
+    height: 400px;
+  }
+  section.contact div.map-row div.map-info {
+    text-align: center;
+    display: block;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    padding: 8px;
+    padding-left: 24px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  section.contact div.map-row div.map-info h3 {
+    font-size: 18pt;
+    font-family: "Myriad Pro Regular";
+    color: #53585a;
+    font-weight: 100;
+  }
+  section.contact div.map-row div.map-info ul.address {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    font-size: 15px;
+    font-family: "Myriad Pro Regular";
+    color: #53575a;
+  }
+  section.contact div.contact-form-row {
+    width: 80%;
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  section.contact div.contact-form-row h3 {
+    font-family: "Myriad Pro Regular";
+    font-size: 18pt;
+    color: #53575a;
+    font-weight: 100;
+  }
+  section.contact div.contact-form-row .contact-form-info {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    color: #53575a;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    align-items: center;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    padding-bottom: 72px;
+    padding-left: 24px;
+  }
+  section.contact div.contact-form-row .contact-form-info ul.working-hours {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+  }
+  section.contact div.contact-form-row .contact-form-info ul.working-hours li {
+    font-family: "Myriad Pro Regular";
+    font-size: 15px;
+  }
+  section.contact div.contact-form-row div.contact-form .input-row {
+    margin: 0px 0px;
+  }
+  section.contact div.contact-form-row div.contact-form .input-row input {
+    width: 100%;
+    height: 40px;
+    margin: 6px 0px;
+    font-size: 20px;
+  }
+  section.contact div.contact-form-row div.contact-form .input-row textarea {
+    width: 100%;
+    margin: 6px 0px;
+    font-size: 20px;
+  }
+  section.contact div.contact-form-row div.contact-form button.form-button {
+    background-color: #cbb67f;
+    color: #fff;
+    padding: 0px 60px 0px 15px;
+    border: none;
+    font-size: 20px;
+    font-family: "FS Albert Arabic Regular";
+  }
+  footer.mobile {
+    display: block;
+    overflow: hidden;
+    padding-top: 32px;
+    margin-top: 20px;
+    background-color: #878b8e;
+  }
+  footer.mobile div.footer-logo-container {
+    text-align: center;
+  }
+  footer.mobile div.footer-logo-container img {
+    max-width: 175px;
+    height: auto;
+  }
+  footer.mobile div.footer-lower {
+    background-position: -300px 0px;
+    height: 240px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  footer.mobile div.footer-lower div.footer-links-container {
+    display: block;
+  }
+  footer.mobile div.footer-lower div.footer-links-container .footer-links {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+    list-style: none;
+  }
+  footer.mobile div.footer-lower div.footer-links-container .footer-links .footer-link {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+  }
+  footer.mobile div.footer-lower div.footer-links-container .footer-links .footer-link a {
+    font-size: 11pt;
+    color: white;
+    text-decoration: none;
+  }
+  footer.mobile div.footer-lower div.footer-links-container .footer-links .footer-link::after {
+    content: "|";
+    font-size: 10pt;
+    color: white;
+    padding: 0px 5px;
+  }
+  footer.mobile div.footer-lower div.footer-links-container div.footer-copyright {
+    font-size: 11pt;
+    text-align: center;
+    line-height: 1.0;
+    font-family: "FS Albert Arabic Regular";
+    color: #fff;
+  }
+  footer.mobile div.footer-social {
+    padding: 90px 0px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    background-image: url("../images/footer-Pattern.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: -190px 0;
+  }
+  footer.mobile div.footer-social ul.social-links {
+    list-style: none;
+    margin: 0px 0px 0px 100px;
+    padding: 0px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  footer.mobile div.footer-social ul.social-links li.social-link {
+    margin: 0px 8px;
+  }
+  footer.mobile div.footer-social ul.social-links li.social-link a {
+    text-decoration: none;
+  }
+  footer.mobile div.footer-social ul.social-links li.social-link a img {
+    width: 50px;
+    height: 50px;
+  }
+  section.tours h2 {
+    display: none;
+  }
+  section.tours div.tours-container div.tour {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  section.tours div.tours-container div.tour div.tour-img-container {
+    height: 50vh;
+    background-size: cover;
+  }
+  section.tours div.tours-container div.tour div.tour-description {
+    padding: 0px 32px;
+    margin-bottom: 32px;
+    text-align: center;
+    font-family: "FS Albert Arabic Regular";
+    color: #53575a;
+    line-height: 1.0;
+    font-weight: 100;
+  }
+  section.tours div.tours-container div.tour div.tour-description h3 {
+    font-size: 30px;
+    font-weight: 100;
+  }
+  section.tours div.tours-container div.tour div.tour-description a.book-now-link {
+    display: inline-block;
+    background-color: #cbb67f;
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 32px;
+  }
+  section.tours div.tours-container div.tour div.tour-description h4 {
+    font-size: 18px;
+  }
+  section.tours div.tours-container div.tour div.tour-description p {
+    font-size: 14px;
+    line-height: 1.2;
+  }
+  section.tours div.tours-container div.tour.second {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  section.visit hr {
+    color: #fff;
+    border: 1px solid #fff;
+    margin: 32px 0px;
+    line-height: 1.1;
+  }
+  section.visit .visit-row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    padding: 0px 32px;
+    text-align: center;
+    font-size: 14pt;
+  }
+  section.visit .visit-row .visit-image-container {
+    min-height: 400px;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  section.visit .visit-row .visit-image-container div.map {
+    height: 400px;
+  }
+  section.visit .visit-row .visit-description {
+    font-family: "FS Albert Arabic Regular";
+    color: #53575a;
+    line-height: 1.2;
+  }
+  section.visit .visit-row .visit-description h2 {
+    font-size: 24pt;
+  }
+  section.visit .visit-row .visit-description p {
+    font-size: 14pt;
+  }
+  section.visit .visit-row .visit-description a.download {
+    text-decoration: none;
+    background-color: #cbb67f;
+    color: #fff;
+    padding: 5px;
+    display: inline-block;
+    margin-bottom: 25px;
+  }
+  section.visit .visit-row ul {
+    list-style: none;
+  }
+  section.learning {
+    font-family: "FS Albert Arabic Regular";
+    color: #53575a;
+    line-height: 1.2;
+    font-size: 14px;
+  }
+  section.learning div.learning-row h2 {
+    text-align: center;
+  }
+  section.interactive div.interactive-row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: reverse !important;
+        -ms-flex-direction: column-reverse !important;
+            flex-direction: column-reverse !important;
+    font-family: "FS Albert Arabic Regular";
+    color: #53575a;
+  }
+  section.interactive div.interactive-row h2 {
+    font-size: 24px;
+    text-align: center;
+  }
+  section.interactive div.interactive-row p {
+    font-size: 14px;
+    margin: 15px;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+/* Large devices (laptops/desktops, 992px and up) */
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .flex-3 {
+    -webkit-box-flex: 1.5 !important;
+        -ms-flex: 1.5 !important;
+            flex: 1.5 !important;
+  }
+  header.mobile {
+    display: none;
+  }
+  footer.mobile {
+    display: none;
+  }
+  header.desktop {
+    background-color: #000;
+  }
+  header.desktop .header-inner-container {
+    padding: 64px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  header.desktop .header-inner-container .logo-container {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+  header.desktop .header-inner-container .logo-container img {
+    width: 150px;
+  }
+  header.desktop .header-inner-container .nav-container {
+    -webkit-box-flex: 6;
+        -ms-flex: 6;
+            flex: 6;
+  }
+  header.desktop .header-inner-container .nav-container nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  header.desktop .header-inner-container .nav-container nav ul.nav-items {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    list-style: none;
+  }
+  header.desktop .header-inner-container .nav-container nav ul.nav-items li.nav-item {
+    padding: 8px 8px;
+    font-family: "Myriad Pro Regular";
+  }
+  header.desktop .header-inner-container .nav-container nav ul.nav-items li.nav-item .dropdown-content {
+    background-color: #000;
+    display: none;
+    position: absolute;
+    z-index: 3;
+  }
+  header.desktop .header-inner-container .nav-container nav ul.nav-items li.nav-item .dropdown-content a {
+    display: block;
+  }
+  header.desktop .header-inner-container .nav-container nav ul.nav-items li.nav-item a {
+    text-decoration: none;
+    color: #78797d;
+    text-transform: uppercase;
+    font-family: "FS Albert Arabic Regular";
+    font-size: 18px;
+  }
+  header.desktop .header-inner-container .nav-container nav ul.nav-items li.nav-item a:hover {
+    color: #fff;
+  }
+  header.desktop .header-inner-container .search-container {
+    -webkit-box-flex: 3;
+        -ms-flex: 3;
+            flex: 3;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  header.desktop .header-inner-container .search-container input {
+    height: 20px;
+    border: 2px solid #8e855e;
+    color: #53575a;
+    font-size: 16px;
+    background-color: transparent;
+  }
+  header.desktop .header-inner-container .search-container a.language-switcher {
+    text-decoration: none;
+    color: white;
+    font-family: "FS Albert Arabic Regular";
+    font-size: 21px;
+  }
+  section.banner .slick-dots li button::before {
+    font-size: 54px !important;
+    top: -35px;
+    color: #cbb67f !important;
+  }
+  section.banner .swiper-slide {
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  section.banner .swiper-slide .slide-title {
+    font-size: 58pt;
+    font-family: "FS Albert Arabic Regular";
+    line-height: 1;
+    text-align: center;
+    color: white;
+  }
+  section.banner .swiper-slide .slick-dots li button {
+    font-size: 38px;
+    line-height: 0;
+    display: block;
+    width: 20px;
+    height: 20px;
+    padding: 5px;
+    cursor: pointer;
+    color: #55272700;
+    border: 0;
+    outline: none;
+    background: #7b2828;
+  }
+  section.about {
+    width: 60%;
+    margin: 0 auto 45px auto;
+  }
+  section.about h2 {
+    font-family: "FS Albert Arabic Regular";
+    color: #53585a;
+    text-align: center;
+    font-size: 58px;
+    line-height: 1;
+    font-weight: 100;
+  }
+  section.about p {
+    font-family: "FS Albert Arabic Regular";
+    font-size: 22px;
+    color: #53575a;
+    line-height: 1.5;
+  }
+  section.contact h2 {
+    font-size: 58px;
+    font-weight: 100;
+    font-family: "FS Albert Arabic Regular";
+    color: #53585a;
+    text-align: center;
+    line-height: 1;
+  }
+  section.contact div.map-row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 80%;
+    margin: 0 auto;
+  }
+  section.contact div.map-row div.map-info {
+    color: #53575a;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    padding: 8px;
+    padding-left: 8px;
+    padding-left: 24px;
+    font-family: "Myriad Pro Regular";
+  }
+  section.contact div.map-row div.map-info h3 {
+    font-size: 36px;
+    margin: 10px 0px;
+    font-weight: 500;
+  }
+  section.contact div.map-row div.map-info ul {
+    list-style: none;
+    font-size: 22px;
+    padding: 0px;
+    margin: 0px;
+  }
+  section.contact div.map-row div.map {
+    -webkit-box-flex: 2;
+        -ms-flex: 2;
+            flex: 2;
+    height: 400px;
+  }
+  section.contact div.contact-form-row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 80%;
+    margin: 0 auto;
+  }
+  section.contact div.contact-form-row div.contact-form {
+    -webkit-box-flex: 2;
+        -ms-flex: 2;
+            flex: 2;
+  }
+  section.contact div.contact-form-row div.contact-form div.input-row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin: 15px 0px;
+  }
+  section.contact div.contact-form-row div.contact-form div.input-row input {
+    font-size: 20px;
+    width: 45%;
+    padding: 5px 15px;
+  }
+  section.contact div.contact-form-row div.contact-form div.input-row textarea {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    font-size: 20px;
+    padding: 5px 15px;
+    font-family: inherit;
+    font-weight: inherit;
+  }
+  section.contact div.contact-form-row div.contact-form div.form-button-container button.form-button {
+    background-color: #cbb67f;
+    color: #fff;
+    padding: 0px 60px 0px 15px;
+    border: none;
+    font-size: 20px;
+    font-family: "FS Albert Arabic Regular";
+  }
+  section.contact div.contact-form-row div.contact-form h3 {
+    color: #53575a;
+    font-family: "Myriad Pro Regular";
+    font-size: 36pt;
+    margin: 10px 0px;
+    font-weight: 500;
+  }
+  section.contact div.contact-form-row div.contact-form-info {
+    color: #53575a;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    padding-bottom: 60px;
+    padding-left: 24px;
+  }
+  section.contact div.contact-form-row div.contact-form-info h3 {
+    font-family: "Myriad Pro Regular";
+    font-weight: 500;
+    font-size: 36px;
+    margin: 10px 0px;
+  }
+  section.contact div.contact-form-row div.contact-form-info ul {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    font-family: "Myriad Pro Regular";
+    font-size: 22px;
+  }
+  section.tours h2 {
+    text-align: center;
+    font-family: "FS Albert Arabic Regular";
+    font-size: 70px;
+    color: #53575a;
+    line-height: 1.0;
+  }
+  section.tours div.tours-container div.tour {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    color: #53575a;
+  }
+  section.tours div.tours-container div.tour div.tour-img-container {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    min-height: 50vh;
+    width: 50vw;
+    background-size: cover;
+  }
+  section.tours div.tours-container div.tour div.tour-description {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+  section.tours div.tours-container div.tour div.tour-description h3 {
+    font-family: "FS Albert Arabic Regular";
+    font-size: 58px;
+    line-height: 1.0;
+    font-weight: 100;
+    padding: 0 64px;
+  }
+  section.tours div.tours-container div.tour div.tour-description h4 {
+    font-family: "FS Albert Arabic Regular";
+    font-size: 22px;
+    font-weight: normal;
+    line-height: 1.0;
+    padding: 0 64px;
+  }
+  section.tours div.tours-container div.tour div.tour-description p {
+    font-family: "FS Albert Arabic Regular";
+    font-size: 22px;
+    line-height: 1.0;
+    padding: 0 64px;
+  }
+  section.tours div.tours-container div.tour div.tour-description a.book-now-link {
+    display: inline-block;
+    width: auto;
+    background-color: #cbb67f;
+    color: #fff;
+    font-family: "FS Albert Arabic Regular";
+    font-size: 28px;
+    text-decoration: none;
+    line-height: 1.0;
+    padding: 8px 16px;
+    margin: 0 0 64px 64px;
+  }
+  section.tours div.tours-container div.tour.second {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+  }
+  section.visit div.visit-row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  section.visit div.visit-row div.visit-image {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+  section.visit div.visit-row div.visit-image div.visit-image-container {
+    min-height: 500px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: auto;
+  }
+  section.visit div.visit-row div.visit-image div.visit-image-container div.map {
+    height: 100%;
+    min-height: 400px;
+  }
+  section.visit div.visit-row div.visit-description {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    font-family: "FS Albert Arabic Regular";
+    color: #53575a;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    font-size: 16pt;
+    line-height: 1.0;
+  }
+  section.visit div.visit-row div.visit-description ul.operating-hours {
+    border-bottom: 2px solid #fff;
+    margin-bottom: 15px;
+  }
+  section.visit div.visit-row div.visit-description ul {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    padding-bottom: 10px;
+    line-height: 1.2;
+  }
+  section.visit div.visit-row div.visit-description a.download {
+    display: inline-block;
+    background-color: #cbb67f;
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 30px;
+  }
+  section.visit div.visit-row div.visit-description div.description-content {
+    margin: 64px;
+  }
+  section.visit div.visit-row h2 {
+    font-size: 40pt;
+    line-height: 1.0;
+    font-weight: 100;
+  }
+  section.visit div.visit-row h3 {
+    padding-bottom: 10px;
+    border-bottom: 2px solid #fff;
+  }
+  section.visit .visit-row.flip {
+    -webkit-box-orient: horizontal !important;
+    -webkit-box-direction: reverse !important;
+        -ms-flex-direction: row-reverse !important;
+            flex-direction: row-reverse !important;
+  }
+  section.visit hr {
+    color: #fff;
+    border: 1px solid #fff;
+    margin: 35px 0px;
+  }
+  section.learning {
+    color: #53575a;
+    font-family: "FS Albert Arabic Regular";
+    line-height: 1.0;
+  }
+  section.learning div.learning-row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    margin: 30px 0px;
+  }
+  section.learning div.learning-row div.learning-title {
+    -webkit-box-flex: 0.5;
+        -ms-flex: 0.5;
+            flex: 0.5;
+    font-size: 58px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  section.learning div.learning-row div.learning-title h2 {
+    font-weight: 100;
+  }
+  section.learning div.learning-row div.learning-lessons {
+    -webkit-box-flex: 0.5;
+        -ms-flex: 0.5;
+            flex: 0.5;
+    font-size: 22px;
+    line-height: 1.2;
+  }
+  section.interactive div.interactive-row {
+    font-family: "FS Albert Arabic Regular";
+    color: #53575a;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    margin: 30px 0px;
+  }
+  section.interactive div.interactive-row div.interactive-video {
+    -webkit-box-flex: 0.5;
+        -ms-flex: 0.5;
+            flex: 0.5;
+  }
+  section.interactive div.interactive-row div.interactive-video div.interactive-video-container {
+    min-height: 400px;
+  }
+  section.interactive div.interactive-row div.interactive-video div.interactive-video-container iframe {
+    min-height: 400px;
+  }
+  section.interactive div.interactive-row div.interactive-text {
+    -webkit-box-flex: 0.5;
+        -ms-flex: 0.5;
+            flex: 0.5;
+    padding: 30px;
+  }
+  section.interactive div.interactive-row div.interactive-text h2 {
+    font-size: 58px;
+    line-height: 1.0;
+    font-weight: 100;
+    margin: 0px;
+  }
+  section.interactive div.interactive-row div.interactive-text p {
+    font-size: 22px;
+    line-height: 1.2;
+  }
+  section.event {
+    font-family: "FS Albert Arabic Regular";
+    color: #53575a;
+  }
+  section.event div.event-row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  section.event div.event-row div.event-image {
+    min-height: 400px;
+    background-size: cover;
+    background-position: center center;
+    -webkit-box-flex: 0.5;
+        -ms-flex: 0.5;
+            flex: 0.5;
+  }
+  section.event div.event-row div.event-description {
+    -webkit-box-flex: 0.5;
+        -ms-flex: 0.5;
+            flex: 0.5;
+    margin: 25px;
+  }
+  section.event div.event-row div.event-description div.event-title h3 {
+    font-size: 58px;
+  }
+  section.event div.event-row div.event-description p {
+    font-size: 22px;
+    line-height: 1.2;
+  }
+  section.event div.event-row div.event-description a.book-event {
+    text-decoration: none;
+    color: #fff;
+    background-color: #cbb67f;
+    padding: 0px 30px;
+    font-size: 22px;
+  }
+  section.event-list {
+    font-family: "FS Albert Arabic Regular";
+    color: #53575a;
+    margin-bottom: 100px;
+  }
+  section.event-list h3 {
+    font-size: 58px;
+    text-align-last: center;
+  }
+  section.event-list div.event-list-row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  section.event-list div.event-list-row div.event-item {
+    text-align: center;
+    background-color: #fff;
+    margin: 0px 25px;
+  }
+  section.event-list div.event-list-row div.event-item div.event-image {
+    margin-top: 50px;
+  }
+  section.event-list div.event-list-row div.event-item div.event-image img {
+    max-width: 150px;
+    height: auto;
+  }
+  section.event-list div.event-list-row div.event-item h4.event-item-title {
+    font-size: 32px;
+  }
+  section.event-list div.event-list-row div.event-item p.event-description {
+    font-size: 22px;
+    line-height: 1.0;
+    margin: 0px 15px;
+  }
+  footer.desktop {
+    display: block;
+    padding: 32px 0px;
+    margin-top: 20px;
+    background-color: #878b8e;
+  }
+  footer.desktop div.footer-logo-container {
+    padding: 0px 80px;
+  }
+  footer.desktop div.footer-logo-container img {
+    max-width: 175px;
+    height: auto;
+  }
+  footer.desktop .footer-lower {
+    background-image: url("../images/footer-Pattern.svg");
+    background-size: cover;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    height: 300px;
+  }
+  footer.desktop .footer-lower div.footer-links-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  footer.desktop .footer-lower div.footer-links-container ul.footer-links {
+    list-style: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+  }
+  footer.desktop .footer-lower div.footer-links-container ul.footer-links li.footer-link {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+    margin: 0px;
+    padding: 0px;
+    line-height: 1;
+  }
+  footer.desktop .footer-lower div.footer-links-container ul.footer-links li.footer-link::after {
+    content: "|";
+    padding: 0px 5px;
+    font-size: 18pt;
+    color: white;
+  }
+  footer.desktop .footer-lower div.footer-links-container ul.footer-links li.footer-link a {
+    text-decoration: none;
+    color: #fff;
+    font-family: "FS Albert Arabic Regular";
+    font-size: 18pt;
+  }
+  footer.desktop .footer-lower div.footer-links-container div.footer-copyright {
+    font-family: "FS Albert Arabic Regular";
+    color: white;
+    font-size: 18pt;
+    line-height: 1;
+  }
+  footer.desktop .footer-lower div.footer-social ul.social-links {
+    list-style: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  footer.desktop .footer-lower div.footer-social ul.social-links li.social-link {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 8px;
+  }
+  footer.desktop .footer-lower div.footer-social ul.social-links li.social-link img {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+body {
+  background-color: #ccc;
+  margin: 0px;
+  padding: 0px;
+  font-size: 12px;
+}
+/*# sourceMappingURL=styles.css.map */

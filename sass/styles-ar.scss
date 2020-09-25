@@ -1,0 +1,115 @@
+html{
+    direction: rtl;
+}
+
+header.desktop {
+  .header-inner-container {
+    direction: rtl;
+    .nav-container {
+      nav {
+        .nav-items {
+          direction: rtl;
+          .nav-item{
+              direction: rtl;
+              &::after{
+                  padding-right: 5px;
+              }
+          }
+        }
+      }
+    }
+    .search-container {
+      direction: rtl;
+    }
+  }
+}
+section.contact{
+    direction: rtl;
+    .form-button {
+        background-color: #cbb67f;
+        color: #fff;
+        padding: 0px 15px 0px 60px !important;
+        border: none;
+        font-size: 20px;
+        font-family: "FS Albert Arabic Regular";
+    }
+    .contact-form-row{
+
+        .contact-form-info{
+            padding-left: 0px;
+            padding-right: 16px;
+        }
+    }
+    .map-row{
+
+        .map-info{
+            padding: 0px;
+            padding-right: 16px;
+        }
+    }
+}
+footer.desktop {
+  direction: rtl;
+
+  .footer-lower {
+    background-image: url("../images/footer-Pattern-ar.svg");
+    background-position: -1140px 0px;
+    direction: rtl;
+    .footer-links-container{
+        .footer-copyright{
+            text-align: center;
+        }
+    }
+  }
+}
+
+
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 300px) and(max-width: 1199px) {
+    footer.mobile .footer-social {
+
+        background-image: url("../images/footer-Pattern-ar.svg") !important;
+        background-position: -979px 0px;
+        direction: rtl;
+        background-repeat: no-repeat;
+    
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    footer.desktop .footer-lower {
+
+        background-image: url("../images/footer-Pattern-ar.svg");
+        background-position: calc(100% - -150px) calc(100% - 0px); 
+        direction: rtl;
+        background-repeat: no-repeat;
+    
+    }
+
+    // Tours
+    .tour{
+      flex-direction: row-reverse;
+      div.tour-description{
+        a.book-now-link{
+          margin: 0 64px 64px 0px !important;
+        }
+      }
+    }
+    .tour.second{
+      flex-direction: row !important;
+    }
+    section.visit{
+      div.visit-row{
+        flex-direction: row-reverse !important;
+      }
+      p{
+        line-height: 1.2;
+      }
+    }
+    .visit-row.flip{
+      flex-direction: row !important;
+    }
+
+}

@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/slick.css" />
+    <link rel="stylesheet" href="./css/slick-theme.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <title>Al Salam Palace Museum</title>
+    <style>
+      .video-container {
+        position: relative;
+        width: 100%;
+        padding-bottom: 56.25%;
+        height: 0;
+      }
+      .video-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+      .parallax-window {
+        min-height: 500px;
+      }
+
+      .parallax-container {
+        width: 100%;
+      }
+      .menu-btn {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 45px;
+        height: 45px;
+        cursor: pointer;
+        transition: all 0.5s ease-in-out;
+        /* border: 3px solid #fff; */
+      }
+      .menu-btn__burger {
+        width: 45px;
+        height: 6px;
+        background: #fff;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
+        transition: all 0.5s ease-in-out;
+      }
+      .menu-btn__burger::before,
+      .menu-btn__burger::after {
+        content: "";
+        position: absolute;
+        width: 45px;
+        height: 6px;
+        background: #fff;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
+        transition: all 0.5s ease-in-out;
+      }
+      .menu-btn__burger::before {
+        transform: translateY(-16px);
+      }
+      .menu-btn__burger::after {
+        transform: translateY(16px);
+      }
+      /* ANIMATION */
+      .menu-btn.open .menu-btn__burger {
+        transform: translateX(-50px);
+        background: transparent;
+        box-shadow: none;
+      }
+      .menu-btn.open .menu-btn__burger::before {
+        transform: rotate(45deg) translate(35px, -35px);
+      }
+      .menu-btn.open .menu-btn__burger::after {
+        transform: rotate(-45deg) translate(35px, 35px);
+      }
+    </style>
+  </head>
+  <body>
+    <header class="desktop">
+      <div class="header-inner-container">
+        <div class="logo-container">
+          <img src="images/Alsalam_Palace_Museum_logo.png" alt="" />
+        </div>
+        <div class="nav-container">
+          <nav>
+            <ul class="nav-items">
+              <li class="nav-item"><a href="#">Home</a></li>
+              <li class="nav-item dropdown">
+                <a href="#">Visit </a>
+
+                <div class="dropdown-content">
+                  <a href="">Plan Your Visit</a>
+                  <a href="">Book a tour</a>
+                  <a href="">School tours</a>
+                  <a href="">Museum Map</a>
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <a href="#">Explore</a>
+                <div class="dropdown-content">
+                  <a href="">Our Story</a>
+                  <a href="">Gallery</a>
+                  <a href="">FAQ</a>
+                  <a href="">Academics &amp; Research</a>
+                  <a href="">Media Relations</a>
+                  <a href="">Careers</a>
+                  <a href="">Contact Us</a>
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <a href="#">What's On</a>
+                <div class="dropdown-content">
+                  <a href="">Exhibitions</a>
+                  <a href="">Events</a>
+                  <a href="">E-learning</a>
+                </div>
+              </li>
+              <li class="nav-item"><a href="#">Gift Shop</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="search-container">
+          <input type="text" placeholder="Search ASPM" />
+          <a href="./index-ar.html" class="language-switcher">عربي</a>
+        </div>
+      </div>
+    </header>
+    <header class="mobile">
+      <div class="header-top-container">
+        <div class="logo-container">
+          <img src="images/Alsalam_Palace_Museum_logo.png" alt="" />
+        </div>
+        <div class="toggle-lang-container">
+          <a href="./index-ar.html" class="language-switcher">عربي</a>
+          <!--<a href="#" class="mobile-menu-toggle"><img src="./images/hamburger-icon.png" alt="" srcset=""></a>-->
+          <a href="#" class="mobile-menu-toggle"
+            ><div class="menu-btn">
+              <div class="menu-btn__burger"></div></div
+          ></a>
+        </div>
+      </div>
+      <div class="header-bottom-container">
+        <div class="search-container">
+          <input type="text" placeholder="Search ASPM" />
+        </div>
+        <div class="nav-container">
+          <!--<div class="close-mobile-menu"><img src="./images/aspm-close-btn.png" alt=""></div>-->
+          <nav>
+            <ul class="nav-items">
+              <li class="nav-item"><a href="#">Home</a></li>
+              <li class="nav-item dropdown">
+                <div class="dropdown-link-container">
+                  <a href="/visit.html">Visit</a>
+                  <span class="mobile-menu-dropdown chevron-animation">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#cbb67f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                  </span>
+                </div>
+                <div class="dropdown-content">
+                  <a href="">- Plan Your Visit</a>
+                  <a href="">- Book a tour</a>
+                  <a href="">- School tours</a>
+                  <a href="">- Museum Map</a>
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <div class="dropdown-link-container">
+                <a href="#">Explore</a>
+                <span class="mobile-menu-dropdown chevron-animation">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#cbb67f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </span>
+              </div>
+              <div class="dropdown-content">
+                <a href="">- Our Story</a>
+                <a href="">- Gallery</a>
+                <a href="">- FAQ</a>
+                <a href="">- Academics &amp; Research</a>
+                <a href="">- Media Relations</a>
+                <a href="">- Careers</a>
+                <a href="">- Contact Us</a>
+              </div>
+              </li>
+              <li class="nav-item dropdown">
+                <div class="dropdown-link-container">
+                <a href="#">What's On</a>
+                <span class="mobile-menu-dropdown chevron-animation">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#cbb67f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </span>
+              </div>
+                <div class="dropdown-content">
+                  <a href="">- Exhibitions</a>
+                  <a href="">- Events</a>
+                  <a href="">- E-learning</a>
+                </div>
+              
+              </li>
+              <li class="nav-item">
+                <a href="#">Gift Shop</a>
+              </li>
+              
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <section class="banner">
+      <!-- Slider main container -->
+      <div class="swiper-container">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div
+            class="swiper-slide"
+            style="background-image: url('./images/banner-new.jpg')"
+          >
+            <div class="slide-title">A unique historical <br />experience</div>
+          </div>
+          <div
+            class="swiper-slide"
+            style="background-image: url('./images/Homepage_image2.jpg')"
+          >
+            <div class="slide-title">A unique historical <br />experience</div>
+          </div>
+          <div
+            class="swiper-slide"
+            style="background-image: url('./images/banner2.jpg')"
+          >
+            <div class="slide-title">A unique historical <br />experience</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section
+      class="about"
+      data-aos="fade-up"
+      data-aos-duration="1000"
+      data-aos-once="true"
+    >
+      <h2>About Al Salam Palace Museum</h2>
+      <p>INTRODUCTION</p>
+      <p>
+        Al Salam Palace Museum is one of the most important projects of the Al
+        Diwan Al Amiri Al Salam Palace was originally designed and built in the
+        1950s as a residential palace for Sheikh Saad Al Abdullah Al Salem Al
+        Sabah. In 1961, after Kuwait gained its independence, a state guest
+        house was needed to host foreign delegations that began to visit Kuwait
+        after becoming a member of the United Nations. Thus, Sheikh Abdullah Al
+        Salem Al Sabah, Amir of Kuwait, transferred the Palace’s ownership to
+        the State. Sheikh Jaber Al Ahmad Al Jaber Al Sabah, Minister of Finance
+        at the time, was assigned to supervise the construction and furnishing.
+      </p>
+      <p>
+        The palace received its first visitor in 1964. Over the following 26
+        years, more than 166 emperors, kings, heads of states and many important
+        political and diplomatic figures visited the Palace. During the Iraqi
+        invasion of Kuwait in 1990 the Palace was destroyed, and its properties
+        were looted. After 23 years, Al Diwan Al Amiri set a plan for
+        refurbishment and renovation of Al Salam Palace, converting it into a
+        museum that narrates 300 years of Kuwait’s history. This was based on a
+        proposal submitted by the Historical Affairs and Museums Sector of Al
+        Diwan Al Amiri, which was assigned the task of collecting the
+        undocumented history of Kuwait from sources all over the world in
+        addition to the design and implementation of the museum.
+      </p>
+      <p>
+        In April 2019, His Highness the Amir of Kuwait Sheikh Sabah Al Ahmad Al
+        Jaber AL Sabah inaugurated Al Salam Palace Museum, which houses three
+        main museums.
+      </p>
+      <p>
+        After six years of continuous work, Al Salam Palace Museum was restored
+        and converted into a museum that combines the history of this nation,
+        which extends back to more than 300 years under one roof. To be the
+        first audio and visual museum in Kuwait. Where you will be experiencing
+        Kuwait’s history in a modern and interactive way to serve as the
+        official State museum.
+      </p>
+    </section>
+    <section class="parallax-container">
+      <div
+        class="parallax-window"
+        data-enllax-ratio="0.5"
+        style="
+          background-image: url('./images/bg-pattern.jpg');
+          background-size: cover;
+        "
+      ></div>
+    </section>
+
+    <section
+      class="video"
+      data-aos="fade-right"
+      data-aos-duration="1000"
+      data-aos-once="true"
+    >
+      <div class="video-container">
+        <iframe
+          width="100%"
+          height="100%"
+          src="https://www.youtube.com/embed/ZuukXRhcjpU"
+          frameborder="0"
+          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </section>
+    <section
+      class="contact"
+      data-aos="slide-right"
+      data-aos-duration="1000"
+      data-aos-once="true"
+    >
+      <h2>Contact</h2>
+      <div class="map-row">
+        <div class="map" id="map"></div>
+        <div class="map-info">
+          <h3>Palace Info</h3>
+          <ul class="address">
+            <li class="address-item">Address: Shwaikh, Kuwait City, Kuwait</li>
+            <li class="address-item">E-mail: contactus@aspm.com.kw</li>
+          </ul>
+        </div>
+      </div>
+      <div class="contact-form-row">
+        <div class="contact-form">
+          <h3>Get In Touch</h3>
+          <div class="input-row">
+            <input type="text" placeholder="Name" />
+            <input type="text" placeholder="Email" />
+          </div>
+          <div class="input-row">
+            <textarea
+              name="message"
+              placeholder="Message"
+              id=""
+              rows="6"
+            ></textarea>
+          </div>
+          <div class="form-button-container">
+            <button class="form-button">Send &nbsp;&gt;</button>
+          </div>
+        </div>
+        <div class="contact-form-info">
+          <h3>Operation Hours</h3>
+          <ul class="working-hours">
+            <li class="working-hours-item">Sunday-Wednesday: 11am - 5pm</li>
+            <li class="working-hours-item">Thursday: 12pm - 6pm</li>
+            <li class="working-hours-item">Friday: Closed</li>
+            <li class="working-hours-item">Saturday: 2pm - 8pm</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <footer class="desktop">
+      <div class="footer-logo-container">
+        <img src="images/Alsalam_Palace_Museum_logo_white.png" alt="" />
+      </div>
+      <div class="footer-lower">
+        <div></div>
+        <div class="footer-links-container">
+          <ul class="footer-links">
+            <li class="footer-link"><a href="#">Privacy Policy</a></li>
+
+            <li class="footer-link"><a href="#">Terms of use</a></li>
+            <li class="footer-link"><a href="#">FAQ</a></li>
+          </ul>
+          <div class="footer-copyright">
+            2020 Al SAlam Palace. All rights reserved
+          </div>
+        </div>
+
+        <div class="footer-social">
+          <ul class="social-links">
+            <li class="social-link">
+              <a href="#"><img src="images/Instagram_Icon.svg" alt="" /></a>
+            </li>
+            <li class="social-link">
+              <a href="#"><img src="images/Youtube_Icon.svg" alt="" /></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <footer class="mobile">
+      <div class="footer-logo-container">
+        <img src="images/Alsalam_Palace_Museum_logo_white.png" alt="" />
+      </div>
+      <div class="footer-lower">
+        <div></div>
+        <div class="footer-links-container">
+          <ul class="footer-links">
+            <li class="footer-link"><a href="#">Privacy Policy</a></li>
+
+            <li class="footer-link"><a href="#">Terms of use</a></li>
+            <li class="footer-link"><a href="#">FAQ</a></li>
+          </ul>
+          <div class="footer-copyright">
+            2020 Al Salam Palace. All rights reserved
+          </div>
+        </div>
+
+        <div class="footer-social">
+          <ul class="social-links">
+            <li class="social-link">
+              <a href="#"><img src="images/Instagram_Icon.svg" alt="" /></a>
+            </li>
+            <li class="social-link">
+              <a href="#"><img src="images/Youtube_Icon.svg" alt="" /></a>
+            </li>
+          </ul>
+        </div>
+        <!-- <div class="footer-spacer"></div> -->
+      </div>
+    </footer>
+    <script src="./js/jquery-3.5.1.min.js"></script>
+    <script src="./js/slick.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/jquery.enllax.min.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAq4BsQCQSDPsYzKSommDWAUz-WqhDRYqg&amp;callback=myMap"></script>
+  </body>
+</html>
