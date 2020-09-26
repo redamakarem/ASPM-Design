@@ -307,7 +307,9 @@ $myriadProReg: "Myriad Pro Regular";
                     }
                     
                 }
-                button.form-button {
+                .form-button-container{
+                  margin-top: 6px;
+                  button.form-button {
 
                     background-color: #cbb67f;
                     color: #fff;
@@ -316,6 +318,7 @@ $myriadProReg: "Myriad Pro Regular";
                     font-size: 20px;
                     font-family: $fsAlbertReg;
                 
+                }
                 }
             }
             

@@ -314,7 +314,10 @@ BREAKPOINTS
     margin: 6px 0px;
     font-size: 20px;
   }
-  section.contact div.contact-form-row div.contact-form button.form-button {
+  section.contact div.contact-form-row div.contact-form .form-button-container {
+    margin-top: 6px;
+  }
+  section.contact div.contact-form-row div.contact-form .form-button-container button.form-button {
     background-color: #cbb67f;
     color: #fff;
     padding: 0px 60px 0px 15px;
