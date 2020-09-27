@@ -618,6 +618,7 @@ BREAKPOINTS
   }
   header.desktop .header-inner-container .nav-container nav ul.nav-items li.nav-item .dropdown-content a {
     display: block;
+    padding: 0px 5px;
   }
   header.desktop .header-inner-container .nav-container nav ul.nav-items li.nav-item a {
     text-decoration: none;
