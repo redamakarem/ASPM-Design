@@ -94,7 +94,7 @@
             <ul class="nav-items">
               <li class="nav-item"><a href="#">الرئيسية</a></li>
               <li class="nav-item dropdown">
-                <a href="#">الزيارة</a>
+                <a href="./visit.html">الزيارة</a>
                 <div class="dropdown-content">
                     <a href="">خطط لزيارتك</a>
                     <a href="">احجز جولتك</a>
@@ -128,7 +128,7 @@
         </div>
         <div class="search-container">
           <input type="text" placeholder="بحث" />
-          <a href="./index.html" class="language-switcher">English</a>
+          <a href="./index-en.html" class="language-switcher">English</a>
         </div>
       </div>
     </header>
@@ -423,42 +423,7 @@
     <script src="./js/slick.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="js/jquery.enllax.min.js"></script>
-    <script>
-      let menuOpen = false;
-      function myMap() {
-        var uluru = { lat: 29.357879, lng: 47.953008 };
-        var map = new google.maps.Map(document.getElementById("map"), {
-          zoom: 18,
-          center: uluru,
-        });
-        var marker = new google.maps.Marker({ position: uluru, map: map });
-      }
-      jQuery(document).ready(function () {
-        jQuery(".swiper-wrapper").slick({
-          autplay: true,
-          autoplaySpeed: 3000,
-          prevArrow: "",
-          nextArrow: "",
-          dots: true,
-          rtl:true
-        });
-        jQuery("header.mobile .nav-container").hide();
-        AOS.init();
-
-        // menu button
-        jQuery(".menu-btn").click(function () {
-          menuOpen = !menuOpen;
-          if (menuOpen) {
-            jQuery(".menu-btn").addClass("open");
-            jQuery("header.mobile .nav-container").slideDown();
-          } else {
-            jQuery(".menu-btn").removeClass("open");
-            jQuery("header.mobile .nav-container").slideUp();
-          }
-        });
-        jQuery(".parallax-window").enllax();
-      });
-    </script>
+    <script src="./js/main.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAq4BsQCQSDPsYzKSommDWAUz-WqhDRYqg&amp;callback=myMap"></script>
   </body>
 </html>
