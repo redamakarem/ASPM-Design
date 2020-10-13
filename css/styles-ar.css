@@ -45,6 +45,20 @@ section.contact .map-row .map-info {
   padding-right: 16px;
 }
 
+section.event div.event-row {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+section.event-list div.event-list-row {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
 footer.desktop {
   direction: rtl;
 }

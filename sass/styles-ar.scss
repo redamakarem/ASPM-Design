@@ -48,6 +48,20 @@ section.contact{
         }
     }
 }
+
+section.event{
+  div.event-row{
+    flex-direction: row-reverse;
+  }
+}
+
+section.event-list{
+  div.event-list-row{
+    flex-direction: row-reverse;
+  }
+}
+
+
 footer.desktop {
   direction: rtl;
 
