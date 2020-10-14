@@ -9,11 +9,11 @@
   src: url("../fonts/MYRIADPRO-REGULAR.OTF");
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
-
-
 
 // Variables
 
@@ -29,16 +29,13 @@ $about-title-font-color: #53585a;
 $fsAlbertReg: "FS Albert Arabic Regular";
 $myriadProReg: "Myriad Pro Regular";
 
-
-.visit-image-container{background-position: center center;}
-
-.chevron-animation{
-  transition: 0.5s ease-in-out;
+.visit-image-container {
+  background-position: center center;
 }
 
-
-
-
+.chevron-animation {
+  transition: 0.5s ease-in-out;
+}
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
@@ -46,532 +43,488 @@ $myriadProReg: "Myriad Pro Regular";
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 300px) and(max-width: 1199px) {
-  body{
+  body {
     overflow-x: hidden;
   }
 
-
-
-    header.desktop{
-        display: none;
-    }
-    footer.desktop{
-        display: none;
-    }
-    header.mobile{
-        background-color: #000;
-        div.header-top-container{
-            display: flex;
-            justify-content: space-between;
-            padding: 20px;
-            div.logo-container{
-                img{
-                    width: 135px;
-                }
-            }
-            div.toggle-lang-container{
-                display: flex;
-                align-items: center;
-                justify-content: flex-end;
-                width: 35%;
-                a.language-switcher {
-                    text-decoration: none;
-                    color: white;
-                    font-family: $fsAlbertReg;
-                    font-size: 14pt;
-                    display: flex;
-                }
-                a.mobile-menu-toggle {
-                    
-                    display: flex;
-                    margin: 10px;
-                
-                }
-            }
-        }
-        div.header-bottom-container{
-            div.search-container{
-                margin-top: 15px;
-                padding: 20px;
-                display: flex;
-                input {
-
-                    background-color: #333333;
-                    color: #cbb67f;
-                    font-size: 10pt;
-                    font-family: $myriadProReg;
-                    padding: 5px 15px;
-                    border: none;
-                    border-radius: 15px;
-                    border: 1px solid #cbb67f;
-                    flex: 1;
-                
-                }
-            }
-            div.nav-container {
-
-                position: absolute;
-                width: 100%;
-                left: 0;
-                top: 190px;
-                z-index: 3;
-                background-color: #333;
-                color: #fff;
-            ul.nav-items{
-                list-style: none;
-                li.nav-item{
-                    a {
-
-                        display: block;
-                        text-decoration: none;
-                        color: #fff;
-                        font-family: "Myriad Pro Regular";
-                        font-size: 22pt;
-                        text-transform: uppercase;
-                        padding: 20px 0px;
-                    
-                    }
-                    div.dropdown-link-container{
-                      display: flex;
-                      justify-content: space-between;
-
-                      span.mobile-menu-dropdown{
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        margin: 10px;
-                        padding: 5px;
-                        // background-color: #ccc;
-                        font-size: 22px;
-                        cursor: pointer;
-                        color: #cbb67f;
-                      }
-                    }
-                }
-                div.dropdown-content{
-                    display: none;
-                    margin-left: 10px;
-                }
-            }
-            }
-        }
-    }
-
-    section.banner .swiper-slide {
-        height: 50vh;
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center center;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        .slide-title {
-          font-size: $about-title-font-size;
-          font-family: $fsAlbertReg;
-          line-height: 1;
-          text-align: center;
-          color: white;
-          font-size: 32pt;
-        }
-        
-      }
-      .slick-dots li button {
-        font-size: 38px;
-        line-height: 0;
-        display: block;
-        width: 20px;
-        height: 20px;
-        padding: 5px;
-        cursor: pointer;
-        color: #cbb67f00;
-        border: 0;
-        outline: none;
-        // background: #7b2828;
-        &::before{
-          font-size: 54px !important;
-          top: -35px !important;
-          color: #cbb67f !important;
-        }
-      }
-    section.about{
-        width:80%;
-        margin: 0 auto 45px auto;
-        h2 {
-            font-size: 24pt;
-            font-family: $fsAlbertReg;
-            line-height: 1;
-            text-align: center;
-            color: #53585a;
-            font-weight: 100;
-        
-        }
-        p {
-
-            font-family: "FS Albert Arabic Regular";
-            font-size: 14pt;
-            line-height: 1.5;
-            color: #53585a;
-            text-align: justify;
-        
-        }
-    }
-    section.contact{
-        h2 {
-
-            font-size: 24pt;
-            font-weight: 100;
-            font-family: $fsAlbertReg;
-            color: #53585a;
-            text-align: center;
-            line-height: 1;
-        
-        }
-        div.map-row{
-            display: block;
-            width: 100%;
-            div.map{
-                flex:2;
-                height: 400px;
-            }
-            div.map-info{
-                text-align: center;
-                display: block;
-                flex:1;
-                padding: 8px;
-                padding-left: 24px;
-                align-items: center;
-                h3{
-                    font-size: 18pt;
-                    font-family: $myriadProReg;
-                    color: $about-title-font-color;
-                    font-weight: 100;
-                }
-                ul.address{
-                    list-style: none;
-                    margin:0px;
-                    padding: 0px;
-                    font-size: 15px;
-                    font-family: $myriadProReg;
-                    color: $text-color;
-                }
-            }
-        }
-        div.contact-form-row{
-            width: 80%;
-            margin: 0 auto;
-            display: flex;
-            flex-direction: column-reverse;
-            h3{
-                font-family: $myriadProReg;
-                font-size: 18pt;
-                color: $text-color;
-                font-weight: 100;
-            }
-            .contact-form-info {
-                align-items: center;
-                color: #53575a;
-                display: flex;
-                flex-direction: column;
-                justify-content: flex-end;
-                align-items: center;
-                flex: 1;
-                padding-bottom: 72px;
-                padding-left: 24px;
-                ul.working-hours{
-                    list-style: none;
-                    margin: 0px;
-                    padding: 0px;
-                    text-align: center;
-                    li{
-                        font-family: $myriadProReg;
-                        font-size: 15px;
-                    }
-                }
-            
-            }
-            div.contact-form{
-                .input-row{
-                    margin: 0px 0px;
-                    input{
-                        width: 100%;
-                        height: 40px;
-                        margin: 6px 0px;
-                        font-size: 20px;
-                        
-                    }
-                    textarea{
-                        width: 100%;
-                        margin: 6px 0px;
-                        font-size: 20px;
-                        
-                    }
-                    
-                }
-                .form-button-container{
-                  margin-top: 6px;
-                  button.form-button {
-
-                    background-color: #cbb67f;
-                    color: #fff;
-                    padding: 0px 60px 0px 15px;
-                    border: none;
-                    font-size: 20px;
-                    font-family: $fsAlbertReg;
-                
-                }
-                }
-            }
-            
-        }
-    }
-
-    section.event{
-      padding: 0 40px;
-      div.event-row{
-        div.event-image{
-          height: 400px;
-          width: auto;
-          background-size: cover;
-        }
-      }
-    }
-    section.event-list{
-      padding: 0 40px;
-      div.event-list-row{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        div.event-item{
-          
-        }
-      }
-    }
-
-
-    footer.mobile{
-        display: block;
-        overflow: hidden;
-        padding-top: 32px;
-        margin-top: 20px;
-        background-color: $footer-bg-color;
-        div.footer-logo-container {
-            text-align: center;
-            img{
-                max-width: 175px;
-                height: auto;
-            }
-        }
-        div.footer-lower {
-
-            background-position: -300px 0px;
-            height: 240px;
-            justify-content: center;
-            div.footer-links-container {
-                display: block;
-                .footer-links {
-                    display: flex;
-                    justify-content: center;
-                    align-items: baseline;
-                    list-style: none;
-
-                    .footer-link {
-                        display: flex;
-                        align-items: baseline;
-                        a{
-                            font-size: 11pt;
-                            color: white;
-                            text-decoration: none;
-                        }
-                        &::after {
-
-                            content: "|";
-                            font-size: 10pt;
-                            color: white;
-                            padding: 0px 5px;
-                        
-                        }
-                    
-                    }
-                
-                }
-                div.footer-copyright {
-
-                    font-size: 11pt;
-                    text-align: center;
-                    line-height: 1.0;
-                    font-family: $fsAlbertReg;
-                    color: #fff;
-                
-                }
-            }        
-        }
-        div.footer-social {
-
-            padding: 90px 0px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            background-image: url("../images/footer-Pattern.svg");
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: -190px 0;
-            ul.social-links {
-
-                list-style: none;
-                margin: 0px 0px 0px 100px;
-                padding: 0px;
-                display: flex;
-                li.social-link{
-                    margin:0px 8px;
-                    a{
-                        text-decoration: none;
-                        img{
-                            width: 50px;
-                            height: 50px;
-                        }
-                    }
-                }
-            
-            }
-        
-        }
-    }
-
-
-    // Visit page
-    section.tours{
-      h2{
-        display: none;
-      }
-      div.tours-container{
-        
-        div.tour{
-          display: flex;
-          flex-direction: column-reverse;
-          div.tour-img-container{
-            height: 50vh;
-            background-size: cover;
-          }
-          div.tour-description{
-            padding: 0px $padding*4;
-            margin-bottom: $padding*4;
-            text-align: center;
-            font-family: $fsAlbertReg;
-            color: $text-color;
-            line-height: 1.0;
-            font-weight: 100;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            h3{
-                font-size: 30px;
-                font-weight: 100;
-            }
-            a.book-now-link{
-              display: inline-block;
-              background-color: #cbb67f;
-              color: #fff;
-              text-decoration: none;
-              padding: $padding $padding*4;
-  
-            }
-            h4{
-              font-size: 18px;
-            }
-            p{
-              font-size: 14px;
-              line-height: 1.2;
-            }
-          }
-        }
-        div.tour.second{
-          flex-direction: column-reverse;
-          
-        }
-      }
-    }
-section.visit{
-  hr{
-    color: #fff;
-    border: 1px solid #fff;
-    margin: 32px 0px;
-    line-height: 1.1;
+  header.desktop {
+    display: none;
   }
-  .visit-row{
+  footer.desktop {
+    display: none;
+  }
+  header.mobile {
+    background-color: #000;
+    div.header-top-container {
+      display: flex;
+      justify-content: space-between;
+      padding: 20px;
+      div.logo-container {
+        img {
+          width: 135px;
+        }
+      }
+      div.toggle-lang-container {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        width: 35%;
+        a.language-switcher {
+          text-decoration: none;
+          color: white;
+          font-family: $fsAlbertReg;
+          font-size: 14pt;
+          display: flex;
+        }
+        a.mobile-menu-toggle {
+          display: flex;
+          margin: 10px;
+        }
+      }
+    }
+    div.header-bottom-container {
+      div.search-container {
+        margin-top: 15px;
+        padding: 20px;
+        display: flex;
+        input {
+          background-color: #333333;
+          color: #cbb67f;
+          font-size: 10pt;
+          font-family: $myriadProReg;
+          padding: 5px 15px;
+          border: none;
+          border-radius: 15px;
+          border: 1px solid #cbb67f;
+          flex: 1;
+        }
+      }
+      div.nav-container {
+        position: absolute;
+        width: 100%;
+        left: 0;
+        top: 190px;
+        z-index: 3;
+        background-color: #333;
+        color: #fff;
+        ul.nav-items {
+          list-style: none;
+          li.nav-item {
+            a {
+              display: block;
+              text-decoration: none;
+              color: #fff;
+              font-family: "Myriad Pro Regular";
+              font-size: 22pt;
+              text-transform: uppercase;
+              padding: 20px 0px;
+            }
+            div.dropdown-link-container {
+              display: flex;
+              justify-content: space-between;
+
+              span.mobile-menu-dropdown {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: 10px;
+                padding: 5px;
+                // background-color: #ccc;
+                font-size: 22px;
+                cursor: pointer;
+                color: #cbb67f;
+              }
+            }
+          }
+          div.dropdown-content {
+            display: none;
+            margin-left: 10px;
+          }
+        }
+      }
+    }
+  }
+
+  section.banner .swiper-slide {
+    height: 50vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
     display: flex;
-    flex-direction: column-reverse;
-    padding: 0px 32px;
-    text-align: center;
-    font-size: 14pt;
-    .visit-image-container{
-      min-height: 400px;
-      background-size: contain;
-      background-repeat: no-repeat;
-      div.map{
+    justify-content: center;
+    align-items: center;
+    .slide-title {
+      font-size: $about-title-font-size;
+      font-family: $fsAlbertReg;
+      line-height: 1;
+      text-align: center;
+      color: white;
+      font-size: 32pt;
+    }
+  }
+  .slick-dots li button {
+    font-size: 38px;
+    line-height: 0;
+    display: block;
+    width: 20px;
+    height: 20px;
+    padding: 5px;
+    cursor: pointer;
+    color: #cbb67f00;
+    border: 0;
+    outline: none;
+    // background: #7b2828;
+    &::before {
+      font-size: 54px !important;
+      top: -35px !important;
+      color: #cbb67f !important;
+    }
+  }
+  section.about {
+    width: 80%;
+    margin: 0 auto 45px auto;
+    h2 {
+      font-size: 24pt;
+      font-family: $fsAlbertReg;
+      line-height: 1;
+      text-align: center;
+      color: #53585a;
+      font-weight: 100;
+    }
+    p {
+      font-family: "FS Albert Arabic Regular";
+      font-size: 14pt;
+      line-height: 1.5;
+      color: #53585a;
+      text-align: justify;
+    }
+  }
+  section.contact {
+    h2 {
+      font-size: 24pt;
+      font-weight: 100;
+      font-family: $fsAlbertReg;
+      color: #53585a;
+      text-align: center;
+      line-height: 1;
+    }
+    div.map-row {
+      display: block;
+      width: 100%;
+      div.map {
+        flex: 2;
         height: 400px;
       }
-    }
-    .visit-description{
-      font-family: $fsAlbertReg;
-      color: $text-color;
-      line-height: 1.2;
-      h2{
-        font-size: 24pt;
+      div.map-info {
+        text-align: center;
+        display: block;
+        flex: 1;
+        padding: 8px;
+        padding-left: 24px;
+        align-items: center;
+        h3 {
+          font-size: 18pt;
+          font-family: $myriadProReg;
+          color: $about-title-font-color;
+          font-weight: 100;
+        }
+        ul.address {
+          list-style: none;
+          margin: 0px;
+          padding: 0px;
+          font-size: 15px;
+          font-family: $myriadProReg;
+          color: $text-color;
+        }
       }
-      p{
-        font-size: 14pt;
-        
+    }
+    div.contact-form-row {
+      width: 80%;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column-reverse;
+      h3 {
+        font-family: $myriadProReg;
+        font-size: 18pt;
+        color: $text-color;
+        font-weight: 100;
       }
-      a.download{
-        text-decoration: none;
-        background-color: #cbb67f;
-        color: #fff;
-        padding: 5px;
-        display: inline-block;
-        margin-bottom: 25px;
+      .contact-form-info {
+        align-items: center;
+        color: #53575a;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+        flex: 1;
+        padding-bottom: 72px;
+        padding-left: 24px;
+        ul.working-hours {
+          list-style: none;
+          margin: 0px;
+          padding: 0px;
+          text-align: center;
+          li {
+            font-family: $myriadProReg;
+            font-size: 15px;
+          }
+        }
+      }
+      div.contact-form {
+        .input-row {
+          margin: 0px 0px;
+          input {
+            width: 100%;
+            height: 40px;
+            margin: 6px 0px;
+            font-size: 20px;
+          }
+          textarea {
+            width: 100%;
+            margin: 6px 0px;
+            font-size: 20px;
+          }
+        }
+        .form-button-container {
+          margin-top: 6px;
+          button.form-button {
+            background-color: #cbb67f;
+            color: #fff;
+            padding: 0px 60px 0px 15px;
+            border: none;
+            font-size: 20px;
+            font-family: $fsAlbertReg;
+          }
+        }
       }
     }
-    ul{
-      list-style: none;
-    }
-    
   }
-  
-}
 
-// Whats on page 
+  section.event {
+    padding: 0 40px;
+    div.event-row {
+      div.event-image {
+        height: 400px;
+        width: auto;
+        background-size: cover;
+      }
+    }
+  }
+  section.event-list {
+    padding: 0 40px;
+    div.event-list-row {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      div.event-item {
+      }
+    }
+  }
 
-section.learning{
-  font-family: $fsAlbertReg;
-  color: $text-color;
-  line-height: 1.2;
-  font-size: 14px;
-  div.learning-row{
-    h2{
+  footer.mobile {
+    display: block;
+    overflow: hidden;
+    padding-top: 32px;
+    margin-top: 20px;
+    background-color: $footer-bg-color;
+    div.footer-logo-container {
       text-align: center;
+      img {
+        max-width: 175px;
+        height: auto;
+      }
+    }
+    div.footer-lower {
+      background-position: -300px 0px;
+      height: 240px;
+      justify-content: center;
+      div.footer-links-container {
+        display: block;
+        .footer-links {
+          display: flex;
+          justify-content: center;
+          align-items: baseline;
+          list-style: none;
+
+          .footer-link {
+            display: flex;
+            align-items: baseline;
+            a {
+              font-size: 11pt;
+              color: white;
+              text-decoration: none;
+            }
+            &::after {
+              content: "|";
+              font-size: 10pt;
+              color: white;
+              padding: 0px 5px;
+            }
+          }
+        }
+        div.footer-copyright {
+          font-size: 11pt;
+          text-align: center;
+          line-height: 1;
+          font-family: $fsAlbertReg;
+          color: #fff;
+        }
+      }
+    }
+    div.footer-social {
+      padding: 90px 0px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background-image: url("../images/footer-Pattern.svg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: -190px 0;
+      ul.social-links {
+        list-style: none;
+        margin: 0px 0px 0px 100px;
+        padding: 0px;
+        display: flex;
+        li.social-link {
+          margin: 0px 8px;
+          a {
+            text-decoration: none;
+            img {
+              width: 50px;
+              height: 50px;
+            }
+          }
+        }
+      }
     }
   }
-}
-section.interactive{
-  div.interactive-row{
-    display: flex;
-    flex-direction: column-reverse !important;
+
+  // Visit page
+  section.tours {
+    h2 {
+      display: none;
+    }
+    div.tours-container {
+      div.tour {
+        display: flex;
+        flex-direction: column-reverse;
+        div.tour-img-container {
+          height: 50vh;
+          background-size: cover;
+        }
+        div.tour-description {
+          padding: 0px $padding * 4;
+          margin-bottom: $padding * 4;
+          text-align: center;
+          font-family: $fsAlbertReg;
+          color: $text-color;
+          line-height: 1;
+          font-weight: 100;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          h3 {
+            font-size: 30px;
+            font-weight: 100;
+          }
+          a.book-now-link {
+            display: inline-block;
+            background-color: #cbb67f;
+            color: #fff;
+            text-decoration: none;
+            padding: $padding $padding * 4;
+          }
+          h4 {
+            font-size: 18px;
+          }
+          p {
+            font-size: 14px;
+            line-height: 1.2;
+          }
+        }
+      }
+      div.tour.second {
+        flex-direction: column-reverse;
+      }
+    }
+  }
+  section.visit {
+    hr {
+      color: #fff;
+      border: 1px solid #fff;
+      margin: 32px 0px;
+      line-height: 1.1;
+    }
+    .visit-row {
+      display: flex;
+      flex-direction: column-reverse;
+      padding: 0px 32px;
+      text-align: center;
+      font-size: 14pt;
+      .visit-image-container {
+        min-height: 400px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        div.map {
+          height: 400px;
+        }
+      }
+      .visit-description {
+        font-family: $fsAlbertReg;
+        color: $text-color;
+        line-height: 1.2;
+        h2 {
+          font-size: 24pt;
+        }
+        p {
+          font-size: 14pt;
+        }
+        a.download {
+          text-decoration: none;
+          background-color: #cbb67f;
+          color: #fff;
+          padding: 5px;
+          display: inline-block;
+          margin-bottom: 25px;
+        }
+      }
+      ul {
+        list-style: none;
+      }
+    }
+  }
+
+  // Whats on page
+
+  section.learning {
     font-family: $fsAlbertReg;
     color: $text-color;
-    h2{
-      font-size: 24px;
-      text-align: center;
+    line-height: 1.2;
+    font-size: 14px;
+    div.learning-row {
+      h2 {
+        text-align: center;
+      }
     }
-    p{
-      font-size: 14px;
-      margin: 15px;
-    }
-
   }
-}
-    
+  section.interactive {
+    div.interactive-row {
+      display: flex;
+      flex-direction: column-reverse !important;
+      font-family: $fsAlbertReg;
+      color: $text-color;
+      h2 {
+        font-size: 24px;
+        text-align: center;
+      }
+      p {
+        font-size: 14px;
+        margin: 15px;
+      }
+    }
+  }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
@@ -584,16 +537,16 @@ section.interactive{
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
-  .flex-3{
+  .flex-3 {
     flex: 1.5 !important;
   }
-    header.mobile{
-        display: none;
-    }
-    
-    footer.mobile{
-        display: none;
-    }
+  header.mobile {
+    display: none;
+  }
+
+  footer.mobile {
+    display: none;
+  }
   header.desktop {
     background-color: #000;
     .header-inner-container {
@@ -616,7 +569,7 @@ section.interactive{
             list-style: none;
 
             li.nav-item {
-              padding: $padding $padding ;
+              padding: $padding $padding;
               font-family: $myriadProReg;
               .dropdown-content {
                 background-color: $nav-bg;
@@ -624,11 +577,9 @@ section.interactive{
                 // display: block;
                 position: absolute;
                 z-index: 3;
-                a{
+                a {
                   display: block;
                   padding: 0px 5px;
-
-
                 }
               }
               a {
@@ -637,7 +588,7 @@ section.interactive{
                 text-transform: uppercase;
                 font-family: $fsAlbertReg;
                 font-size: 18px;
-                &:hover{
+                &:hover {
                   color: #fff;
                 }
               }
@@ -651,14 +602,12 @@ section.interactive{
         justify-content: space-evenly;
         align-items: center;
         input {
-
           height: 20px;
           border: 2px solid #8e855e;
           color: #53575a;
           font-size: 16px;
           background-color: transparent;
-      
-      }
+        }
         a.language-switcher {
           text-decoration: none;
           color: white;
@@ -669,8 +618,8 @@ section.interactive{
     }
   }
   section.banner {
-    .slick-dots li button{
-      &::before{
+    .slick-dots li button {
+      &::before {
         font-size: 54px !important;
         top: -35px;
         color: #cbb67f !important;
@@ -826,74 +775,68 @@ section.interactive{
         padding-bottom: 60px;
         padding-left: 24px;
         h3 {
-
-            font-family: $myriadProReg;
-            font-weight: 500;
-            font-size: 36px;
-            margin: 10px 0px;
-        
+          font-family: $myriadProReg;
+          font-weight: 500;
+          font-size: 36px;
+          margin: 10px 0px;
         }
         ul {
-
-            list-style: none;
-            margin: 0px;
-            padding: 0px;
-            font-family: $myriadProReg;
-            font-size: 22px;
-        
+          list-style: none;
+          margin: 0px;
+          padding: 0px;
+          font-family: $myriadProReg;
+          font-size: 22px;
         }
       }
     }
   }
 
-  section.tours{
-    h2{
+  section.tours {
+    h2 {
       text-align: center;
       font-family: $fsAlbertReg;
       font-size: 70px;
       color: $text-color;
-      line-height: 1.0;
+      line-height: 1;
     }
-    div.tours-container{
-      div.tour{
+    div.tours-container {
+      div.tour {
         display: flex;
         color: $text-color;
-        
-        div.tour-img-container{
+
+        div.tour-img-container {
           flex: 1;
           min-height: 50vh;
           width: 50vw;
           background-size: cover;
         }
-        div.tour-description{
+        div.tour-description {
           flex: 1;
           display: flex;
-            flex-direction: column;
-            justify-content: center;
-          
-          h3{
+          flex-direction: column;
+          justify-content: center;
+
+          h3 {
             font-family: $fsAlbertReg;
             font-size: 58px;
-            line-height: 1.0;
+            line-height: 1;
             font-weight: 100;
-            padding: 0 $padding*8;
-
+            padding: 0 $padding * 8;
           }
-          h4{
+          h4 {
             font-family: $fsAlbertReg;
             font-size: 22px;
             font-weight: normal;
-            line-height: 1.0;
-            padding: 0 $padding*8;
+            line-height: 1;
+            padding: 0 $padding * 8;
           }
-          p{
+          p {
             font-family: $fsAlbertReg;
             font-size: 22px;
-            line-height: 1.0;
-            padding: 0 $padding*8;
-            
+            line-height: 1;
+            padding: 0 $padding * 8;
           }
-          a.book-now-link{
+          a.book-now-link {
             display: inline-block;
             width: auto;
             background-color: #cbb67f;
@@ -901,172 +844,168 @@ section.interactive{
             font-family: $fsAlbertReg;
             font-size: 28px;
             text-decoration: none;
-            line-height: 1.0;
-            padding: $padding $padding*2;
+            line-height: 1;
+            padding: $padding $padding * 2;
             margin: 0 0 64px 64px;
           }
         }
-        
       }
-      div.tour.second{
+      div.tour.second {
         flex-direction: row-reverse;
       }
     }
   }
   // Visit Page
 
-  section.visit{
-    div.visit-row{
+  section.visit {
+    div.visit-row {
       display: flex;
-      div.visit-image{
+      div.visit-image {
         flex: 1;
-        div.visit-image-container{
+        div.visit-image-container {
           min-height: 500px;
           background-size: contain;
           background-repeat: no-repeat;
           width: 100%;
           height: auto;
-          div.map{
+          div.map {
             height: 100%;
             min-height: 400px;
           }
         }
       }
-      div.visit-description{
+      div.visit-description {
         box-sizing: border-box;
         font-family: $fsAlbertReg;
         color: $text-color;
         flex: 1;
         font-size: 16pt;
-        line-height: 1.0;
-        ul.operating-hours{
-          
+        line-height: 1;
+        ul.operating-hours {
           border-bottom: 2px solid #fff;
           margin-bottom: 15px;
         }
-        ul{
+        ul {
           list-style: none;
           margin: 0px;
           padding: 0px;
           padding-bottom: 10px;
           line-height: 1.2;
-        }a.download{
+        }
+        a.download {
           display: inline-block;
           background-color: #cbb67f;
           color: #fff;
           text-decoration: none;
           padding: 5px 30px;
         }
-        div.description-content{
+        div.description-content {
           margin: 64px;
         }
       }
-      h2{
-          font-size: 40pt;
-          line-height: 1.0;
-          font-weight: 100;
+      h2 {
+        font-size: 40pt;
+        line-height: 1;
+        font-weight: 100;
       }
-      h3{
+      h3 {
         padding-bottom: 10px;
         border-bottom: 2px solid #fff;
       }
     }
-    .visit-row.flip{
+    .visit-row.flip {
       flex-direction: row-reverse !important;
     }
-    hr{
+    hr {
       color: #fff;
       border: 1px solid #fff;
       margin: 35px 0px;
     }
   }
 
-  section.learning{
+  section.learning {
     color: $text-color;
     font-family: $fsAlbertReg;
-    line-height: 1.0;
-    div.learning-row{
-      
+    line-height: 1;
+    div.learning-row {
       display: flex;
       flex-direction: row;
       margin: 30px 0px;
-      div.learning-title{
+      div.learning-title {
         flex: 0.5;
         font-size: 58px;
         display: flex;
         justify-content: center;
-        h2{
+        h2 {
           font-weight: 100;
         }
       }
-      div.learning-lessons{
+      div.learning-lessons {
         flex: 0.5;
         font-size: 22px;
         line-height: 1.2;
       }
     }
-
-    
   }
-  section.interactive{
-    div.interactive-row{
+  section.interactive {
+    div.interactive-row {
       font-family: $fsAlbertReg;
       color: $text-color;
       display: flex;
       flex-direction: row;
       margin: 30px 0px;
-      div.interactive-video{
+      div.interactive-video {
         flex: 0.5;
-        div.interactive-video-container{
+        div.interactive-video-container {
           min-height: 400px;
-          iframe{
+          iframe {
             min-height: 400px;
           }
         }
       }
-      div.interactive-text{
-        flex:0.5;
+      div.interactive-text {
+        flex: 0.5;
         padding: 30px;
-        h2{
+        h2 {
           font-size: 58px;
-          line-height: 1.0;
+          line-height: 1;
           font-weight: 100;
           margin: 0px;
         }
-        p{
+        p {
           font-size: 22px;
           line-height: 1.2;
         }
       }
     }
   }
-// Events Page
-  section.event{
+  // Events Page
+  section.event {
     font-family: $fsAlbertReg;
     color: $text-color;
-    div.event-row{
+    div.event-row {
       display: flex;
-      div.event-image{
+      div.event-image {
         min-height: 400px;
         // height: 400px;
         background-size: cover;
         background-position: center center;
         flex: 0.5;
       }
-      div.event-description{
+      div.event-description {
         flex: 0.5;
         margin: 25px;
 
-        div.event-title{
-          h3{
+        div.event-title {
+          h3 {
             font-size: 58px;
           }
         }
-        p{
+        p {
           font-size: 22px;
           line-height: 1.2;
         }
-        a.book-event{
+        a.book-event {
           text-decoration: none;
           color: #fff;
           background-color: #cbb67f;
@@ -1077,134 +1016,173 @@ section.interactive{
     }
   }
 
-
-  section.event-list{
+  section.event-list {
     font-family: $fsAlbertReg;
     color: $text-color;
 
-    h3{
+    h3 {
       font-size: 58px;
       text-align-last: center;
     }
-    div.event-list-row{
+    div.event-list-row {
       display: flex;
       justify-content: space-around;
-      div.event-item{
+      div.event-item {
         text-align: center;
         background-color: #fff;
         margin: 0px 25px;
-        div.event-image{
+        div.event-image {
           margin-top: 50px;
-          img{
+          img {
             max-width: 150px;
             height: auto;
           }
-          
         }
-        h4.event-item-title{
+        h4.event-item-title {
           font-size: 32px;
         }
-        p.event-description{
+        p.event-description {
           font-size: 22px;
-          line-height: 1.0;
+          line-height: 1;
           margin: 0px 15px;
         }
       }
     }
   }
 
-
-  footer.desktop{
-      display: block;
-      padding: 32px 0px;
-      margin-top: 20px;
-      background-color: $footer-bg-color;
-      div.footer-logo-container{
-          padding: 0px 80px;
-          img{
-              max-width: 175px;
-              height: auto;
-          }
-      }
-      .footer-lower {
-
-        background-image: url("../images/footer-Pattern.svg");
-        background-size: cover;
+  section.booking {
+    div.booking-container {
+      display: flex;
+      width: 80%;
+      margin: 0 auto;
+      justify-content: center;
+      div.booking-options {
         display: flex;
-        align-items: center;
-        -ms-flex-pack: distribute;
-        justify-content: space-around;
-        height: 300px;
-        div.footer-links-container {
-            display: flex;
-            flex-direction: column;
-            // margin-left: 250px;
-
-            ul.footer-links {
-
-                list-style: none;
-                display: flex;
-                align-items: baseline;
-                li.footer-link {
-                    display: flex;
-                    align-items: baseline;
-                    margin: 0px;
-                    padding: 0px;
-                    line-height: 1;
-                    &::after {
-
-                        content: "|";
-                        padding: 0px 5px;
-                        font-size: 18pt;
-                        color: white;
-                    
-                    }
-
-                    a {
-
-                        text-decoration: none;
-                        color: #fff;
-                        font-family: $fsAlbertReg;
-                        font-size: 18pt;
-                    
-                    }
-                
-                }
+        justify-content: space-evenly;
+        flex: 1;
+        div.booking-option {
+          margin: 0px 5px;
+          span.label{
+            font-size: 28px;
+            display: inline-block;
+            padding: 10px 5px;
+          }
+          div.input-container {
+            background-color: #fff;
+            width: 100%;
+            padding: 0px 5px;
             
+            input{
+              border:none;
+              height: 45px;
+              font-size: 16px;
+              text-align: center;
             }
-
-            div.footer-copyright {
-
-                font-family: $fsAlbertReg;
-                color: white;
-                font-size: 18pt;
-                line-height: 1;
             
+            i{
+              font-size: $about-content-font-size;
             }
-        
+            span.plus, span.minus{
+              display: inline-block;
+              border: 1px solid #000;
+              padding: 3px;
+              border-radius: 2px;
+            }
+          }
+          select{
+            height: 45px;
+            width: 100%;
+            font-size: 16px;
+          }
+          button{
+            width: 45px;
+            height: 45px;
+            text-align: center;
+            background-color: transparent;
+            border: none;
+            i{
+              font-size: 45px;
+            }
+          }
         }
-        div.footer-social{
-            ul.social-links {
-
-                list-style: none;
-                display: flex;
-                li.social-link {
-                    display: flex;
-                    margin: 8px;
-                    img{
-                        width: 50px;
-                        height: 50px;
-                    }
-                
-                }
-            
-            }
-        }
-    
+      }
     }
   }
 
- 
+  footer.desktop {
+    display: block;
+    padding: 32px 0px;
+    margin-top: 20px;
+    background-color: $footer-bg-color;
+    div.footer-logo-container {
+      padding: 0px 80px;
+      img {
+        max-width: 175px;
+        height: auto;
+      }
+    }
+    .footer-lower {
+      background-image: url("../images/footer-Pattern.svg");
+      background-size: cover;
+      display: flex;
+      align-items: center;
+      -ms-flex-pack: distribute;
+      justify-content: space-around;
+      height: 300px;
+      div.footer-links-container {
+        display: flex;
+        flex-direction: column;
+        // margin-left: 250px;
+
+        ul.footer-links {
+          list-style: none;
+          display: flex;
+          align-items: baseline;
+          li.footer-link {
+            display: flex;
+            align-items: baseline;
+            margin: 0px;
+            padding: 0px;
+            line-height: 1;
+            &::after {
+              content: "|";
+              padding: 0px 5px;
+              font-size: 18pt;
+              color: white;
+            }
+
+            a {
+              text-decoration: none;
+              color: #fff;
+              font-family: $fsAlbertReg;
+              font-size: 18pt;
+            }
+          }
+        }
+
+        div.footer-copyright {
+          font-family: $fsAlbertReg;
+          color: white;
+          font-size: 18pt;
+          line-height: 1;
+        }
+      }
+      div.footer-social {
+        ul.social-links {
+          list-style: none;
+          display: flex;
+          li.social-link {
+            display: flex;
+            margin: 8px;
+            img {
+              width: 50px;
+              height: 50px;
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 body {
@@ -1213,7 +1191,6 @@ body {
   padding: 0px;
   font-size: 12px;
 }
-
 
 // header.desktop{}
 // header.mobile{}

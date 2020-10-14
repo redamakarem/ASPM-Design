@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="ar">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/slick.css" />
+    <link rel="stylesheet" href="./css/slick-theme.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/styles-ar.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <title>Al Salam Palace Museum</title>
+    <style>
+      .video-container {
+        position: relative;
+        width: 100%;
+        padding-bottom: 56.25%;
+        height: 0;
+      }
+      .video-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+      .parallax-window {
+        min-height: 500px;
+      }
+
+      .parallax-container {
+        width: 100%;
+      }
+      .menu-btn {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 45px;
+        height: 45px;
+        cursor: pointer;
+        transition: all 0.5s ease-in-out;
+        /* border: 3px solid #fff; */
+      }
+      .menu-btn__burger {
+        width: 45px;
+        height: 6px;
+        background: #fff;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
+        transition: all 0.5s ease-in-out;
+      }
+      .menu-btn__burger::before,
+      .menu-btn__burger::after {
+        content: "";
+        position: absolute;
+        width: 45px;
+        height: 6px;
+        background: #fff;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
+        transition: all 0.5s ease-in-out;
+      }
+      .menu-btn__burger::before {
+        transform: translateY(-16px);
+      }
+      .menu-btn__burger::after {
+        transform: translateY(16px);
+      }
+      /* ANIMATION */
+      .menu-btn.open .menu-btn__burger {
+        transform: translateX(-50px);
+        background: transparent;
+        box-shadow: none;
+      }
+      .menu-btn.open .menu-btn__burger::before {
+        transform: rotate(45deg) translate(35px, -35px);
+      }
+      .menu-btn.open .menu-btn__burger::after {
+        transform: rotate(-45deg) translate(35px, 35px);
+      }
+
+      
+    </style>
+  </head>
+  <body>
+    <header class="desktop">
+      <div class="header-inner-container">
+        <div class="logo-container">
+          <a href="#">
+            <img src="images/Alsalam_Palace_Museum_logo.png" alt="" />
+          </a>
+        </div>
+        <div class="nav-container">
+          <nav>
+            <ul class="nav-items">
+              <li class="nav-item"><a href="#">الرئيسية</a></li>
+              <li class="nav-item dropdown">
+                <a href="./visit.html">الزيارة</a>
+                <div class="dropdown-content">
+                  <a href="">خطط لزيارتك</a>
+                  <a href="./tours.html">احجز جولتك</a>
+                  <a href="./school-visits.html">الجولات المدرسية</a>
+                  <a href="">خريطة المتحف</a>
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <a href="#">استكشف</a>
+                <div class="dropdown-content">
+                  <a href="">قصتنا</a>
+                  <a href="">معرض الصور</a>
+                  <a href="">الوظائف</a>
+                  <a href="">البحوث الاكاديمية</a>
+                  <a href="">التغطية الاعلامية</a>
+                  <a href="">اتصل بنا</a>
+                </div>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a href="#">جديدنا</a>
+                <div class="dropdown-content">
+                  <a href="">المعارض المؤقتة</a>
+                  <a href="">الفعاليات</a>
+                  <a href="./whats-on-learning.html">التعلم عبر الانترنت</a>
+                </div>
+              </li>
+              <li class="nav-item"><a href="#">سوق الهدايا</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="search-container">
+          <input type="text" placeholder="بحث" />
+          <a href="./index-en.html" class="language-switcher">English</a>
+        </div>
+      </div>
+    </header>
+    <header class="mobile">
+      <div class="header-top-container">
+        <div class="logo-container">
+          <a href="#">
+            <img src="images/Alsalam_Palace_Museum_logo.png" alt="" />
+          </a>
+        </div>
+        <div class="toggle-lang-container">
+          <a href="./index-en.html" class="language-switcher">English</a>
+          <!--<a href="#" class="mobile-menu-toggle"><img src="./images/hamburger-icon.png" alt="" srcset=""></a>-->
+          <a href="#" class="mobile-menu-toggle"
+            ><div class="menu-btn">
+              <div class="menu-btn__burger"></div></div
+          ></a>
+        </div>
+      </div>
+      <div class="header-bottom-container">
+        <div class="search-container">
+          <input type="text" placeholder="بحث" />
+        </div>
+        <div class="nav-container">
+          <!--<div class="close-mobile-menu"><img src="./images/aspm-close-btn.png" alt=""></div>-->
+          <nav>
+            <ul class="nav-items">
+              <li class="nav-item"><a href="#">الرئيسية</a></li>
+              <li class="nav-item dropdown">
+                <div class="dropdown-link-container">
+                  <a href="./visit.html">الزيارة</a>
+                  <span class="mobile-menu-dropdown chevron-animation">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="#cbb67f"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="feather feather-chevron-down"
+                    >
+                      <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                  </span>
+                </div>
+                <div class="dropdown-content">
+                  <a href="">- خطط لزيارتك</a>
+                  <a href="./visit.html">- احجز جولتك</a>
+                  <a href="./school-visits.html">- الجولات المدرسية</a>
+                  <a href="">- خريطة المتحف</a>
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <div class="dropdown-link-container">
+                  <a href="./visit-ar.html">استكشف</a>
+                  <span class="mobile-menu-dropdown chevron-animation">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="#cbb67f"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="feather feather-chevron-down"
+                    >
+                      <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                  </span>
+                </div>
+                <div class="dropdown-content">
+                  <a href="">- قصتنا</a>
+                  <a href="">- معرض الصور</a>
+                  <a href="">- الوظائف</a>
+                  <a href="">- البحوث الاكاديمية</a>
+                  <a href="">- التغطية الاعلامية</a>
+                  <a href="">- اتصل بنا</a>
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <div class="dropdown-link-container">
+                  <a href="/visit-ar.html">ما الجديد</a>
+                  <span class="mobile-menu-dropdown chevron-animation">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="#cbb67f"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="feather feather-chevron-down"
+                    >
+                      <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                  </span>
+                </div>
+                <div class="dropdown-content">
+                  <a href="">- المعارض المؤقتة</a>
+                  <a href="">- الفعاليات</a>
+                  <a href="./whats-on-learning.html">- التعلم عبر الانترنت</a>
+                </div>
+              </li>
+              <li class="nav-item"><a href="#">سوق الهدايا</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <section class="banner">
+      <!-- Slider main container -->
+      <div class="swiper-container">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div
+            class="swiper-slide"
+            style="background-image: url('./images/Homepage_image1.jpg')"
+          >
+            <div class="slide-title">زيارة متحف قصر السلام</div>
+          </div>
+          <div
+            class="swiper-slide"
+            style="background-image: url('./images/Homepage_image2.jpg')"
+          >
+            <div class="slide-title">زيارة متحف قصر السلام</div>
+          </div>
+          <div
+            class="swiper-slide"
+            style="background-image: url('./images/banner2.jpg')"
+          >
+            <div class="slide-title">زيارة متحف قصر السلام</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="booking">
+      <h2>انطلق في رحلة عبر الزمن</h2>
+      <div class="booking-container">
+        <div class="booking-options">
+            <div class="booking-option" style="flex:1.5;">
+                <span class="label">حدد تجربتك</span>
+              <div class="input-container">
+                <select name="tour" id="">
+                    <option value="0">حدد تجربتك</option>
+                    <option value="0">حدد تجربتك</option>
+                    <option value="0">حدد تجربتك</option>
+                    <option value="0">حدد تجربتك</option>
+                  </select>
+              </div>
+            </div>
+            <div class="booking-option" style="flex:1;">
+                <span class="label">حدد تجربتك</span>
+                <div class="input-container">
+                    <div class="number">
+                        <span class="minus">-</span>
+                        <input type="text" id="seats" value="1"/>
+                        <span class="plus">+</span>
+                    </div>
+                </div>
+            </div>
+            <div class="booking-option" style="flex:1;">
+                <span class="label">حدد تجربتك</span>
+              <div class="input-container">         
+                <input
+                  class="input-field"
+                  type="text"
+                  
+                  name="usrnm"
+                />
+                <i class="fa fa-calendar icon"></i>
+              </div>
+            </div>
+            <div class="booking-option" style="flex:1;">
+                <span class="label">حدد تجربتك</span>
+                <div class="input-container">         
+                  <input
+                    class="input-field"
+                    type="text"
+                    
+                    name="usrnm"
+                  />
+                  <i class="fa fa-clock-o icon"></i>
+                </div>
+              </div>
+              <div class="booking-option" style="display: flex; flex-direction: column; justify-content: end;">
+                  <button class="submit-booking"><i class="fa fa-arrow-circle-o-left" aria-hidden="true"></i>
+                  </button>
+              </div>
+          </div>
+      </div>
+    </section>
+
+    <footer class="desktop">
+      <div class="footer-logo-container">
+        <img src="images/Alsalam_Palace_Museum_logo_white.png" alt="" />
+      </div>
+      <div class="footer-lower">
+        <div></div>
+        <div class="footer-links-container">
+          <ul class="footer-links">
+            <li class="footer-link"><a href="#">سياسة الخصوصية</a></li>
+
+            <li class="footer-link"><a href="#">شروط الاستخدام</a></li>
+            <li class="footer-link"><a href="#">الاسئلة الشائعة</a></li>
+          </ul>
+          <div class="footer-copyright">
+            2020 قصر السلام. جميع الحقوق محفوظة
+          </div>
+        </div>
+
+        <div class="footer-social">
+          <ul class="social-links">
+            <li class="social-link">
+              <a href="#"><img src="images/Instagram_Icon.svg" alt="" /></a>
+            </li>
+            <li class="social-link">
+              <a href="#"><img src="images/Youtube_Icon.svg" alt="" /></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <footer class="mobile">
+      <div class="footer-logo-container">
+        <img src="images/Alsalam_Palace_Museum_logo_white.png" alt="" />
+      </div>
+      <div class="footer-lower">
+        <div></div>
+        <div class="footer-links-container">
+          <ul class="footer-links">
+            <li class="footer-link"><a href="#">سياسة الخصوصية</a></li>
+
+            <li class="footer-link"><a href="#">شروط الاستخدام</a></li>
+            <li class="footer-link"><a href="#">الاسئلة الشائعة</a></li>
+          </ul>
+          <div class="footer-copyright">
+            2020 قصر السلام. جميع الحقوق محفوظة
+          </div>
+        </div>
+
+        <div class="footer-social">
+          <ul class="social-links">
+            <li class="social-link">
+              <a href="#"><img src="images/Instagram_Icon.svg" alt="" /></a>
+            </li>
+            <li class="social-link">
+              <a href="#"><img src="images/Youtube_Icon.svg" alt="" /></a>
+            </li>
+          </ul>
+        </div>
+        <!-- <div class="footer-spacer"></div> -->
+      </div>
+    </footer>
+    <script src="./js/jquery-3.5.1.min.js"></script>
+    <script src="./js/slick.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/jquery.enllax.min.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB0M8DXCddgJILcgM4CyORZRErq--EgdAY&amp;callback=myMap"></script>
+  </body>
+</html>
