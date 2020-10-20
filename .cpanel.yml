@@ -1,0 +1,5 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/redamakarem/public_html/aspm-designss
+    - /bin/cp -r * $DEPLOYPATH
