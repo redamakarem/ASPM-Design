@@ -18,6 +18,10 @@ BREAKPOINTS
           box-sizing: border-box;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 .visit-image-container {
   background-position: center center;
 }
@@ -105,7 +109,7 @@ BREAKPOINTS
     position: absolute;
     width: 100%;
     left: 0;
-    top: 190px;
+    top: 185px;
     z-index: 3;
     background-color: #333;
     color: #fff;
@@ -1186,6 +1190,16 @@ BREAKPOINTS
     line-height: 1;
     margin: 0px 15px;
   }
+  section.booking {
+    font-family: "FS Albert Arabic Regular";
+  }
+  section.booking h2 {
+    font-size: 58px;
+    color: #53575a;
+    width: 80%;
+    margin: 0 auto;
+    font-weight: normal;
+  }
   section.booking div.booking-container {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1214,6 +1228,8 @@ BREAKPOINTS
     font-size: 28px;
     display: inline-block;
     padding: 10px 5px;
+    color: #53575a;
+    line-height: 1.0;
   }
   section.booking div.booking-container div.booking-options div.booking-option div.input-container {
     background-color: #fff;
@@ -1227,13 +1243,10 @@ BREAKPOINTS
     text-align: center;
   }
   section.booking div.booking-container div.booking-options div.booking-option div.input-container i {
-    font-size: 22pt;
+    font-size: 26px;
   }
   section.booking div.booking-container div.booking-options div.booking-option div.input-container span.plus, section.booking div.booking-container div.booking-options div.booking-option div.input-container span.minus {
     display: inline-block;
-    border: 1px solid #000;
-    padding: 3px;
-    border-radius: 2px;
   }
   section.booking div.booking-container div.booking-options div.booking-option select {
     height: 45px;
@@ -1249,6 +1262,128 @@ BREAKPOINTS
   }
   section.booking div.booking-container div.booking-options div.booking-option button i {
     font-size: 45px;
+  }
+  section.booking div.tour-info-container {
+    margin-top: 15px !important;
+    background-color: #fff;
+    width: 80%;
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  section.booking div.tour-info-container div.tour-info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 20px;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+  section.booking div.tour-info-container div.tour-info div.info-text {
+    font-size: 22px;
+    color: #53575a;
+    -webkit-box-flex: 0.5;
+        -ms-flex: 0.5;
+            flex: 0.5;
+  }
+  section.booking div.tour-info-container div.tour-info div.info-text ul {
+    line-height: 1.2;
+    margin: 0;
+    padding: 0px 10px;
+  }
+  section.booking div.tour-info-container div.tour-info div.info-image {
+    -webkit-box-flex: 0.5;
+        -ms-flex: 0.5;
+            flex: 0.5;
+  }
+  section.booking div.tour-info-container div.tour-info div.info-image div.image-container {
+    height: 250px;
+    background-size: cover;
+  }
+  section.booking-details {
+    font-family: "FS Albert Arabic Regular";
+    color: #53575a;
+  }
+  section.booking-details div.booking-details-container {
+    width: 80%;
+    margin: 0 auto;
+  }
+  section.booking-details div.booking-details-container h2 {
+    font-size: 58px;
+    font-weight: normal;
+    line-height: 1.0;
+  }
+  section.booking-details div.booking-details-container div.form-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 30px;
+  }
+  section.booking-details div.booking-details-container div.form-content div.form-fields {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-flex: 0.5;
+        -ms-flex: 0.5;
+            flex: 0.5;
+  }
+  section.booking-details div.booking-details-container div.form-content div.form-fields div.input-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  section.booking-details div.booking-details-container div.form-content div.form-fields div.input-container label {
+    font-size: 22px;
+    margin: 0px 20px;
+  }
+  section.booking-details div.booking-details-container div.form-content div.form-fields div.input-container input {
+    height: 40px;
+    border: none;
+  }
+  section.booking-details div.booking-details-container div.form-content div.booking-summary {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 0.5;
+        -ms-flex: 0.5;
+            flex: 0.5;
+    background-color: #fff;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 0px 20px;
+  }
+  section.booking-details div.booking-details-container div.form-content div.booking-summary table {
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 20px;
+  }
+  section.booking-details div.booking-details-container div.form-content div.booking-summary table td:first-child + td + td {
+    text-align: left;
+  }
+  section.booking-details div.booking-details-container div.form-content div.booking-summary table tr:first-child td {
+    border-bottom: 1px solid #000;
+  }
+  section.booking-details div.booking-details-container div.form-content div.booking-summary table button {
+    background-color: #c4b581;
+    color: #fff;
+    font-size: 28px;
+    font-family: "FS Albert Arabic Regular";
+    padding: 0px 20px;
   }
   footer.desktop {
     display: block;

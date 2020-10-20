@@ -14,6 +14,9 @@
 *::after {
   box-sizing: border-box;
 }
+body{
+  overflow-x: hidden;
+}
 
 // Variables
 
@@ -103,7 +106,7 @@ $myriadProReg: "Myriad Pro Regular";
         position: absolute;
         width: 100%;
         left: 0;
-        top: 190px;
+        top: 185px;
         z-index: 3;
         background-color: #333;
         color: #fff;
@@ -1051,6 +1054,14 @@ $myriadProReg: "Myriad Pro Regular";
   }
 
   section.booking {
+    font-family: $fsAlbertReg;
+    h2{
+      font-size: 58px;
+      color: $text-color;
+      width: 80%;
+      margin: 0 auto;
+      font-weight: normal;
+    }
     div.booking-container {
       display: flex;
       width: 80%;
@@ -1066,6 +1077,8 @@ $myriadProReg: "Myriad Pro Regular";
             font-size: 28px;
             display: inline-block;
             padding: 10px 5px;
+            color: $text-color;
+            line-height: 1.0;
           }
           div.input-container {
             background-color: #fff;
@@ -1080,13 +1093,12 @@ $myriadProReg: "Myriad Pro Regular";
             }
             
             i{
-              font-size: $about-content-font-size;
+              font-size: 26px;
             }
             span.plus, span.minus{
               display: inline-block;
-              border: 1px solid #000;
-              padding: 3px;
-              border-radius: 2px;
+              
+              
             }
           }
           select{
@@ -1102,6 +1114,95 @@ $myriadProReg: "Myriad Pro Regular";
             border: none;
             i{
               font-size: 45px;
+            }
+          }
+        }
+      }
+    }
+    div.tour-info-container{
+      margin-top: 15px !important;
+      background-color: #fff;
+      width: 80%;
+      margin: 0 auto;
+      display: flex;
+      div.tour-info{
+        display: flex;
+        padding: 20px;
+        flex: 1;
+        div.info-text{
+          font-size: 22px;
+          color: $text-color;
+          flex: 0.5;
+          ul{
+            line-height: 1.2;
+            margin: 0;
+            padding: 0px 10px;
+          }
+        }
+        div.info-image{
+          flex: 0.5;
+          div.image-container{
+            height: 250px;
+            background-size: cover;
+          }
+        }
+      }
+    }
+  }
+  section.booking-details{
+    font-family: $fsAlbertReg;
+    color: $text-color;
+    div.booking-details-container{
+      width: 80%;
+      margin:0 auto;
+      h2{
+        font-size: 58px;
+        font-weight: normal;
+        line-height: 1.0;
+      }
+      div.form-content{
+        display: flex;
+        gap: 30px;
+        div.form-fields{
+          display: flex;
+          flex-direction: column;
+          flex: 0.5;
+          div.input-container{
+            display: flex;
+            flex-direction: column;
+            label{
+              font-size: 22px;
+              margin: 0px 20px;
+            }
+            input{
+              height: 40px;
+              border: none;
+            }
+          }
+        }
+        div.booking-summary{
+          display: flex;
+          flex: 0.5;
+          background-color: #fff;
+          flex-direction: column;
+          justify-content: center;
+          padding: 0px 20px;
+          table{
+            border-collapse: collapse;
+            width: 100%;
+            font-size: 20px;
+            td:first-child + td + td{
+              text-align: left;
+            }
+            tr:first-child td{
+              border-bottom: 1px solid #000;
+            }
+            button{
+              background-color: #c4b581;
+              color: #fff;
+              font-size: 28px;
+              font-family: $fsAlbertReg;
+              padding: 0px 20px;
             }
           }
         }
