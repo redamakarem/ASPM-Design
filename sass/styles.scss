@@ -14,7 +14,7 @@
 *::after {
   box-sizing: border-box;
 }
-body{
+body {
   overflow-x: hidden;
 }
 
@@ -31,6 +31,7 @@ $about-content-font-size: 22pt;
 $about-title-font-color: #53585a;
 $fsAlbertReg: "FS Albert Arabic Regular";
 $myriadProReg: "Myriad Pro Regular";
+$button-color: #c5b682;
 
 .visit-image-container {
   background-position: center center;
@@ -51,10 +52,10 @@ $myriadProReg: "Myriad Pro Regular";
   }
 
   header.desktop {
-    display: none;
+    display: none !important;
   }
   footer.desktop {
-    display: none;
+    display: none !important;
   }
   header.mobile {
     background-color: #000;
@@ -325,6 +326,60 @@ $myriadProReg: "Myriad Pro Regular";
     }
   }
 
+  //School visit page
+
+  section.school-visit{
+    font-family: $fsAlbertReg;
+    color: $text-color;
+    div.school-visit-container{
+      width: 80%;
+      margin: 0 auto;
+      form{
+        display: flex;
+        flex-direction: column;
+        div.school-visit-col{
+          div.form-section-heading{
+            background-color: $button-color;
+            color: #fff;
+            font-size: 14px;
+            text-align: center;
+          }
+          div.input-container{
+            display: flex;
+            flex-direction: column;
+            div.label{
+              font-size: 14px;
+            }
+            select,input{
+              flex-basis: fill;
+              border: none;
+              color: $text-color;
+              font-family: $fsAlbertReg;
+            }
+          }
+          div.spacer{
+            height: 20px;
+          }
+
+          div.button-wrapper{
+            display: flex;
+            justify-content: center;
+            button{
+              font-family: $fsAlbertReg;
+              background-color: $button-color;
+              color: #fff;
+              border: none;
+              font-size: 14px;
+              width: 60%;
+            }
+
+          }
+          
+        }
+      }
+    }
+  }
+
   footer.mobile {
     display: block;
     overflow: hidden;
@@ -528,6 +583,150 @@ $myriadProReg: "Myriad Pro Regular";
       }
     }
   }
+
+  //Booking Page
+  section.booking {
+    font-family: $fsAlbertReg;
+    color: $text-color;
+    width: 80%;
+    margin: 0 auto;
+    h2 {
+      font-size: 30px;
+    }
+    div.booking-container {
+      div.booking-options {
+        div.booking-option {
+          span.label {
+            font-size: 15px;
+          }
+          div.input-container {
+            background-color: #fff;
+            display: flex;
+            align-items: center;
+            select {
+              width: 100%;
+              height: 25px;
+            }
+            input {
+              flex: 1;
+              border: none;
+              height: 25px;
+            }
+            i {
+              margin: 0px 10px;
+            }
+            div.number {
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              flex: 1;
+              input {
+                flex: 1;
+                text-align: center;
+              }
+              span {
+                display: flex;
+                height: 20px;
+                width: 20px;
+                margin: 0px 5px;
+                align-items: center;
+                justify-content: center;
+              }
+            }
+            div.icon-container{
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              img{
+                width: 18px;
+                height: 18px;
+                margin: 0px 5px;
+              }
+            }
+          }
+          button.submit-booking {
+            border: none;
+            background-color: transparent;
+            img{
+              width: 32px;
+              height: 32px;
+            }
+          }
+        }
+        div.booking-option.book-button {
+          display: flex;
+          flex-direction: column;
+          justify-content: end;
+          align-items: center;
+          margin: 10px 0px;
+        }
+      }
+    }
+
+    div.tour-info-container {
+      background-color: #fff;
+      div.tour-info {
+        div.info-text {
+          padding: 0px 5px;
+          ul {
+            margin: 0px;
+            padding: 10px 20px;
+            line-height: 1.8;
+          }
+        }
+        div.info-image {
+          padding: 15px;
+          div.image-container {
+            min-height: 300px;
+            width: auto;
+          }
+        }
+      }
+    }
+  }
+
+  //Booking Details
+
+  section.booking-details {
+    font-family: $fsAlbertReg;
+    color: $text-color;
+    width: 80%;
+    margin: 0 auto;
+    div.booking-details-container {
+      h2 {
+        font-size: 28px;
+        line-height: 1.4;
+        color: $text-color;
+      }
+      form {
+        div.form-content {
+          div.form-fields {
+            div.input-container {
+              input {
+                width: 100%;
+                font-size: 14px;
+                border: none;
+              }
+            }
+          }
+          table.desktop {
+            display: none;
+          }
+          table.mobile {
+            display: block;
+            background-color: #fff;
+          }
+        }
+      }
+    }
+    label {
+      display: block;
+      line-height: 1.2;
+      font-size: 14px;
+    }
+  }
+
+  // Explore Gallery Page
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
@@ -1055,7 +1254,7 @@ $myriadProReg: "Myriad Pro Regular";
 
   section.booking {
     font-family: $fsAlbertReg;
-    h2{
+    h2 {
       font-size: 58px;
       color: $text-color;
       width: 80%;
@@ -1073,75 +1272,102 @@ $myriadProReg: "Myriad Pro Regular";
         flex: 1;
         div.booking-option {
           margin: 0px 5px;
-          span.label{
+          span.label {
             font-size: 28px;
             display: inline-block;
             padding: 10px 5px;
             color: $text-color;
-            line-height: 1.0;
+            line-height: 1;
           }
           div.input-container {
             background-color: #fff;
             width: 100%;
             padding: 0px 5px;
-            
-            input{
-              border:none;
+            display: flex;
+            div.number{
+              display: flex;
+              flex: 1;
+              flex-direction: row;
+              justify-content: space-between;
+              span{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+              }
+            }
+            input {
+              border: none;
               height: 45px;
               font-size: 16px;
               text-align: center;
+              display: flex;
+              flex: 1;
             }
-            
-            i{
+
+            i {
               font-size: 26px;
             }
-            span.plus, span.minus{
+            span.plus,
+            span.minus {
               display: inline-block;
-              
-              
+            }
+            div.icon-container{
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              img{
+                width: 32px;
+                height: 32px;
+              }
             }
           }
-          select{
+          select {
             height: 45px;
             width: 100%;
             font-size: 16px;
+            border: none;
           }
-          button{
-            width: 45px;
-            height: 45px;
+          button {
+            // width: 45px;
+            // height: 45px;
             text-align: center;
             background-color: transparent;
             border: none;
-            i{
+            i {
               font-size: 45px;
             }
           }
         }
+        div.booking-option.book-button{
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-end;
+        }
       }
     }
-    div.tour-info-container{
+    div.tour-info-container {
       margin-top: 15px !important;
       background-color: #fff;
       width: 80%;
       margin: 0 auto;
       display: flex;
-      div.tour-info{
+      div.tour-info {
         display: flex;
         padding: 20px;
         flex: 1;
-        div.info-text{
+        div.info-text {
           font-size: 22px;
           color: $text-color;
           flex: 0.5;
-          ul{
+          ul {
             line-height: 1.2;
             margin: 0;
             padding: 0px 10px;
           }
         }
-        div.info-image{
+        div.info-image {
           flex: 0.5;
-          div.image-container{
+          div.image-container {
             height: 250px;
             background-size: cover;
           }
@@ -1149,55 +1375,55 @@ $myriadProReg: "Myriad Pro Regular";
       }
     }
   }
-  section.booking-details{
+  section.booking-details {
     font-family: $fsAlbertReg;
     color: $text-color;
-    div.booking-details-container{
+    div.booking-details-container {
       width: 80%;
-      margin:0 auto;
-      h2{
+      margin: 0 auto;
+      h2 {
         font-size: 58px;
         font-weight: normal;
-        line-height: 1.0;
+        line-height: 1;
       }
-      div.form-content{
+      div.form-content {
         display: flex;
         gap: 30px;
-        div.form-fields{
+        div.form-fields {
           display: flex;
           flex-direction: column;
           flex: 0.5;
-          div.input-container{
+          div.input-container {
             display: flex;
             flex-direction: column;
-            label{
+            label {
               font-size: 22px;
               margin: 0px 20px;
             }
-            input{
+            input {
               height: 40px;
               border: none;
             }
           }
         }
-        div.booking-summary{
+        div.booking-summary {
           display: flex;
           flex: 0.5;
           background-color: #fff;
           flex-direction: column;
           justify-content: center;
           padding: 0px 20px;
-          table{
+          table {
             border-collapse: collapse;
             width: 100%;
             font-size: 20px;
-            td:first-child + td + td{
+            td:first-child + td + td {
               text-align: left;
             }
-            tr:first-child td{
+            tr:first-child td {
               border-bottom: 1px solid #000;
             }
-            button{
+            button {
               background-color: #c4b581;
               color: #fff;
               font-size: 28px;
@@ -1205,6 +1431,168 @@ $myriadProReg: "Myriad Pro Regular";
               padding: 0px 20px;
             }
           }
+        }
+        table.desktop {
+          display: block;
+        }
+        table.mobile {
+          display: none;
+        }
+      }
+    }
+  }
+
+  section.school-visit{
+    div.spacer{
+      height: 30px;
+    }
+    line-height: 1.3;
+    font-family: $fsAlbertReg;
+    color: $text-color;
+    div.school-visit-container{
+      width: 80%;
+      margin: 0 auto;
+      form{
+        display: flex;
+        justify-content: space-between;
+        div.school-visit-col{
+          flex-basis: 48%;
+
+          div.form-section-heading{
+            padding: 0px;
+            background-color: $button-color;
+            color: #fff;
+            font-size: 28px;
+            text-align: center;
+          }
+          div.input-container{
+            display: flex;
+            flex-direction: column;
+
+            div.label, select, input,span{
+              font-size: 20px;
+              color: $text-color;
+              font-family: $fsAlbertReg;
+              line-height: 1.0;
+              border: none;
+
+            }
+            div.label{
+              line-height: 1.5;
+              margin: 5px 0px;
+            }
+            select{
+              line-height: 0.8;
+              padding: 0;
+            }
+            
+          }
+          button{
+            background-color: $button-color;
+            color: #fff;
+            font-size: 20px;
+            font-family: $fsAlbertReg;
+            padding: 0px 30px;
+            margin-top: 25px;
+            border: none;
+          }
+        }
+      }
+    }
+  }
+
+  section.gallery-desc {
+    width: 80%;
+    margin: 0 auto;
+    font-family: $fsAlbertReg;
+    color: $text-color;
+    h2 {
+      font-size: 58px;
+    }
+    div.gallery-desc-container {
+      display: flex;
+      div.desc-text {
+        display: flex;
+        flex: 1;
+        font-size: 22px;
+        line-height: 1.2;
+      }
+      div.desc-image-container {
+        display: flex;
+        flex: 1;
+        div.desc-image {
+          min-height: 400px;
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  // Shop
+
+  section.shop-header{
+    div.shop-header{
+      div.inner-container{
+        width: 80%;
+        margin: 0 auto;
+      div.search-container{}
+      }
+      div.auth-container{}
+      }
+    }
+    div.shop-menu-container{
+      ul.shop-menu{
+        display: flex;
+        justify-content: center;
+        list-style: none;
+        li{
+          margin: 0px 10px;
+          a{
+            text-decoration: none;
+            font-size: 18px;
+          }
+        }
+      }
+    }
+  }
+
+  section.shop-body{
+    .grid-container{
+      width: 80%;
+      margin: 0 auto;
+      .flex-grid {
+        display: flex;
+      }
+      .flex-grid .col {
+        flex: 1;
+      }
+      .flex-grid-thirds {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+      }
+      .flex-grid-thirds .col {
+        padding: 20px 0px;
+        margin-bottom: 20px;
+        width: 32%;
+        background-color: #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .product-links{
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+          padding: 0px 25px;
+          a.product-link{
+            text-decoration: none;
+            color: $text-color;
+            font-size: 23px;
+          }
+          a.product-link.second{
+            font-size: 20px;
+          }
+
         }
       }
     }
@@ -1284,7 +1672,7 @@ $myriadProReg: "Myriad Pro Regular";
       }
     }
   }
-}
+
 
 body {
   background-color: #ccc;
